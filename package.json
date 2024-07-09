@@ -14,10 +14,15 @@
     "fmt:check": "prettier --check ."
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^14.2.4",
+    "@tailwindcss/typography": "^0.5.13",
     "clsx": "^2.1.1",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "remark-smartypants": "^3.0.2",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

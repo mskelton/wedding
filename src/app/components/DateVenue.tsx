@@ -2,7 +2,7 @@ import { date } from "../lib/date"
 
 export function DateVenue() {
   return (
-    <section className="px-8 py-40 text-center dark:text-white" id="date-venue">
+    <section className="my-40 px-8 text-center dark:text-white" id="date-venue">
       <h3 className="mb-4 text-5xl">
         {date.toLocaleDateString(undefined, {
           day: "numeric",

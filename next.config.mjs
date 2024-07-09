@@ -1,13 +1,34 @@
+import nextMDX from "@next/mdx"
+import remarkSmartypants from "remark-smartypants"
+
 /** @type {import("next").NextConfig} */
 const nextConfig = {
+  eslint: {
+    dirs: ["app", "components", "config", "e2e"],
+  },
+  experimental: {
+    mdxRs: true,
+  },
   images: {
+    minimumCacheTTL: 3600, // 1 hour
     remotePatterns: [
       {
-        protocol: "https",
         hostname: "picsum.photos",
+        protocol: "https",
       },
     ],
   },
+  output: "standalone",
+  pageExtensions: ["ts", "tsx", "mdx"],
+  reactStrictMode: true,
 }
 
-export default nextConfig
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: {
+    rehypePlugins: [],
+    remarkPlugins: [remarkSmartypants],
+  },
+})
+
+export default withMDX(nextConfig)

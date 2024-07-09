@@ -1,7 +1,7 @@
 import "./globals.css"
 import clsx from "clsx"
 import type { Metadata } from "next"
-import { BioRhyme, Dancing_Script } from "next/font/google"
+import { BioRhyme, Dancing_Script, Roboto_Flex } from "next/font/google"
 
 const cursive = Dancing_Script({
   display: "swap",
@@ -13,6 +13,12 @@ const serif = BioRhyme({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-serif",
+})
+
+const sans = Roboto_Flex({
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-sans",
 })
 
 export const metadata: Metadata = {
@@ -28,7 +34,12 @@ export default function RootLayout({
   return (
     <html className="h-full scroll-smooth bg-white dark:bg-zinc-950" lang="en">
       <body
-        className={clsx(cursive.variable, serif.variable, "h-full font-serif")}
+        className={clsx(
+          cursive.variable,
+          serif.variable,
+          sans.variable,
+          "h-full font-serif",
+        )}
       >
         {children}
       </body>
