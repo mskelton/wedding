@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["@mskelton", "@mskelton/eslint-config/react", "next"],
+  "plugins": ["mskelton"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "mskelton/no-unescaped-quotes": "error"
+  },
+  "overrides": [
+    {
+      "files": "config/**",
+      "rules": {
+        "sort/object-properties": "off"
+      }
+    }
+  ]
 }
