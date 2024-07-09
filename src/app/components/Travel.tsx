@@ -1,7 +1,7 @@
 export function Travel() {
   return (
-    <section className="py-40 px-8 text-center dark:text-white" id="travel">
-      <h3 className="text-5xl mb-8">Travel</h3>
+    <section className="px-8 py-40 text-center dark:text-white" id="travel">
+      <h3 className="mb-8 text-5xl">Travel</h3>
 
       <p />
     </section>

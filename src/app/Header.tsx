@@ -15,9 +15,9 @@ function Item({
     <li>
       <a
         className={clsx(
-          "py-1 px-3 rounded-md transition-colors",
+          "rounded-md px-3 py-1 transition-colors",
           variant === "primary" &&
-            "bg-zinc-900 text-white dark:bg-white dark:text-black hover:bg-rose-500",
+            "bg-zinc-900 text-white hover:bg-rose-500 dark:bg-white dark:text-black",
           variant === "secondary" && "hover:text-rose-500",
           className,
         )}
@@ -31,7 +31,7 @@ function Item({
 
 export function Header() {
   return (
-    <header className="h-[--header-height] px-8 flex justify-between items-center dark:bg-zinc-900 dark:text-white">
+    <header className="flex h-[--header-height] items-center justify-between px-8 dark:bg-zinc-900 dark:text-white">
       <p className="font-cursive text-4xl">M&W</p>
 
       <nav>

@@ -26,9 +26,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className="bg-white dark:bg-zinc-950 h-full scroll-smooth" lang="en">
+    <html className="h-full scroll-smooth bg-white dark:bg-zinc-950" lang="en">
       <body
-        className={clsx(cursive.variable, serif.variable, "font-serif h-full")}
+        className={clsx(cursive.variable, serif.variable, "h-full font-serif")}
       >
         {children}
       </body>
