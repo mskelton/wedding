@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { date } from "../lib/date"
+import { dates } from "../lib/date"
 
 function Item({ label, value }: { label: string; value: number }) {
   return (
@@ -24,7 +24,7 @@ const factors = {
 
 export function WeddingDateCounter() {
   const [now, setNow] = useState(new Date())
-  const diff = date.getTime() - now.getTime()
+  const diff = dates.wedding.getTime() - now.getTime()
   const days = Math.floor(diff / factors.days)
   const hours = Math.floor((diff % factors.days) / factors.hours)
   const minutes = Math.floor((diff % factors.hours) / factors.minutes)

@@ -6,6 +6,10 @@ const entities = [
   { alternatives: ["’", "‘"], char: "'" },
 ]
 
+/**
+ * @param {import("eslint").RuleContext} context
+ * @param {Literal | JSXText} node
+ */
 function reportUnescaped(context, node) {
   const source = context.getSourceCode()
 
