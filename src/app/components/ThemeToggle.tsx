@@ -1,0 +1,49 @@
+"use client"
+
+import { useEffect } from "react"
+import { themeEffect } from "../lib/themeEffect"
+
+function handleChange(value: string) {
+  if (value === "system") {
+    localStorage.removeItem("theme")
+  } else {
+    localStorage.setItem("theme", value)
+  }
+
+  themeEffect()
+}
+
+export function ThemeToggle() {
+  useEffect(() => {
+    // React to storage changes in other tabs
+    function handleStorageChange(event: StorageEvent) {
+      if (event.key === "theme") {
+        themeEffect()
+      }
+    }
+    window.addEventListener("storage", handleStorageChange)
+
+    // Theme switch keyboard shortcut
+    function handleKeyDown(event: KeyboardEvent) {
+      // Allow quick switching the theme when holding down cmd/ctrl
+      if ((event.metaKey || event.ctrlKey) && event.key === "d") {
+        handleChange(themeEffect() === "dark" ? "light" : "dark")
+        themeEffect()
+      }
+    }
+    document.addEventListener("keydown", handleKeyDown)
+
+    // Refresh the theme when the user changes their system theme. If the user
+    // set a preference, this will be ignored.
+    const matchMedia = window.matchMedia("(prefers-color-scheme: dark)")
+    matchMedia.addEventListener("change", themeEffect)
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange)
+      document.removeEventListener("keydown", handleKeyDown)
+      matchMedia.removeEventListener("change", themeEffect)
+    }
+  }, [])
+
+  return null
+}

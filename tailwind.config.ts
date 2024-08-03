@@ -7,7 +7,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "media",
+  darkMode: process.env.NODE_ENV === "production" ? "media" : "class",
   plugins: [typography],
   theme: {
     extend: {

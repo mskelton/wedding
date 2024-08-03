@@ -13,7 +13,7 @@ export function Button({ className, href, ...props }: ButtonProps) {
   return (
     <Component
       className={twMerge(
-        "inline-block border border-black px-3 py-1 transition-colors hover:bg-black hover:text-white",
+        "inline-block border border-black px-3 py-1 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black",
         className,
       )}
       href={href}

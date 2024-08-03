@@ -1,6 +1,9 @@
 import { DateVenue } from "./components/DateVenue"
+import { FAQs } from "./components/FAQs"
+import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero"
 import { OurStory } from "./components/OurStory"
+import { RSVP } from "./components/RSVP"
 import { Travel } from "./components/Travel"
 import { Header } from "./Header"
 
@@ -13,9 +16,10 @@ export default function Home() {
         <Hero />
         <DateVenue />
         <OurStory />
-        {/* <FAQs /> */}
+        <FAQs />
         <Travel />
-        {/* <RSVP /> */}
+        <RSVP />
+        <Footer />
       </main>
     </div>
   )

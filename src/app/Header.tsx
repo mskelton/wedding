@@ -17,7 +17,7 @@ function Item({
         className={clsx(
           "rounded-md px-3 py-1 transition-colors",
           variant === "primary" &&
-            "bg-zinc-900 text-white hover:bg-rose-500 dark:bg-white dark:text-black",
+            "bg-zinc-900 text-white hover:bg-rose-500 dark:bg-white dark:text-black dark:hover:bg-rose-500 dark:hover:text-white",
           variant === "secondary" && "hover:text-rose-500",
           className,
         )}
@@ -31,7 +31,8 @@ function Item({
 
 export function Header() {
   return (
-    <header className="flex h-[--header-height] items-center justify-between px-8 dark:bg-zinc-900 dark:text-white">
+    // TODO: blur
+    <header className="fixed top-0 z-10 flex h-[--header-height] w-full items-center justify-between bg-white/70 px-8 shadow-md dark:bg-zinc-900 dark:text-white">
       <p className="font-cursive text-4xl">M&W</p>
 
       <nav>
