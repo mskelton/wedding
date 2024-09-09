@@ -105,7 +105,8 @@ function Card({
       className={clsx(
         "group relative grid items-center gap-6 border border-zinc-200 p-3 text-left dark:border-zinc-700",
         action || href ? "grid-cols-[1fr,auto]" : "grid-cols-1",
-        href && "transition hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50",
+        href &&
+          "transition-colors hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50",
       )}
     >
       <div>

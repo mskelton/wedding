@@ -1,5 +1,6 @@
 "use client"
 
+import { MoonIcon, SunIcon } from "@heroicons/react/20/solid"
 import { useEffect } from "react"
 import { themeEffect } from "../lib/themeEffect"
 
@@ -45,5 +46,15 @@ export function ThemeToggle() {
     }
   }, [])
 
-  return null
+  return process.env.NODE_ENV === "production" ? null : (
+    <button
+      aria-label="Set website theme"
+      className="size-10 px-2 py-1 text-sm text-black transition-colors hover:text-rose-500 dark:text-white dark:hover:text-rose-500"
+      onClick={() => handleChange(themeEffect() === "dark" ? "light" : "dark")}
+      type="button"
+    >
+      <SunIcon className="dark:hidden" />
+      <MoonIcon className="hidden dark:block" />
+    </button>
+  )
 }
