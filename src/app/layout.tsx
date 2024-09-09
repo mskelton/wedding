@@ -2,7 +2,6 @@ import "./globals.css"
 import clsx from "clsx"
 import type { Metadata } from "next"
 import { BioRhyme, Dancing_Script, Roboto_Flex } from "next/font/google"
-import { ThemeToggle } from "./components/ThemeToggle"
 import { themeEffect } from "./lib/themeEffect"
 
 const cursive = Dancing_Script({
@@ -51,7 +50,6 @@ export default function RootLayout({
           "h-full bg-white font-serif dark:bg-zinc-950",
         )}
       >
-        <ThemeToggle />
         {children}
       </body>
     </html>

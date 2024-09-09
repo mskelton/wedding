@@ -118,7 +118,7 @@ const elements = [
 
 type SupportedHTMLElements = (typeof elements)[number]
 
-type StyledComponent<T extends SupportedHTMLElements> = (classes: string) => {
+type StyledComponent<T extends SupportedHTMLElements> = (classes?: string) => {
   (props: React.ComponentPropsWithoutRef<T>): JSX.Element
 }
 

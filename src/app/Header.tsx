@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import { ThemeToggle } from "./components/ThemeToggle"
 
 function Item({
   children,
@@ -32,7 +33,7 @@ function Item({
 export function Header() {
   return (
     // TODO: blur
-    <header className="fixed top-0 z-10 flex h-[--header-height] w-full items-center justify-between bg-white/70 px-8 shadow-md dark:bg-zinc-900 dark:text-white">
+    <header className="fixed top-0 z-10 hidden h-[--header-height] w-full items-center justify-between bg-white/70 px-8 shadow-md dark:bg-zinc-900 dark:text-white md:flex">
       <p className="font-cursive text-4xl">M&W</p>
 
       <nav>
@@ -44,6 +45,8 @@ export function Header() {
           <Item href="#rsvp" variant="primary">
             RSVP
           </Item>
+
+          <ThemeToggle />
         </ul>
       </nav>
     </header>

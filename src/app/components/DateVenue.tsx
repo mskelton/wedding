@@ -29,7 +29,7 @@ export function DateVenue() {
         </span>
       </p>
 
-      <div className="flex justify-center gap-32">
+      <div className="flex flex-col justify-center gap-16 md:flex-row md:gap-32">
         <div>
           <Subheader>Ceremony</Subheader>
           <Time>
@@ -41,7 +41,6 @@ export function DateVenue() {
           <Text>Monroe Bible Church</Text>
           <Location>Monroe, Wisconsin</Location>
           <Button
-            className="mb-16"
             href="https://maps.app.goo.gl/RucPEE5TDz4acEUN7"
             target="_blank"
           >

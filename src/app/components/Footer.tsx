@@ -12,7 +12,7 @@ export function Footer() {
       <p>
         View source on{" "}
         <a
-          className="text-blue-500"
+          className="text-blue-500 hover:underline"
           href="https://github.com/mskelton/wedding-website"
           target="_blank"
         >
