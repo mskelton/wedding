@@ -21,13 +21,17 @@ export function DateVenue() {
         })}
       </PageSectionTitle>
 
-      <p className="mb-16 text-2xl text-zinc-400 dark:text-zinc-600">
-        <span className="relative before:absolute before:-left-[200%] before:right-[-200%] before:top-1/2 before:block before:h-0.5 before:bg-zinc-300 dark:before:bg-zinc-700">
-          <span className="isolate bg-white px-3 dark:bg-zinc-950">
+      <div className="relative mb-16 w-full">
+        <div className="absolute top-[calc(50%-1px)] flex w-full justify-center">
+          <div className="h-0.5 w-[90%] max-w-screen-md bg-zinc-300 dark:bg-zinc-700" />
+        </div>
+
+        <div className="isolate flex items-center justify-center">
+          <p className="bg-white px-4 text-2xl text-zinc-400 dark:bg-zinc-950 dark:text-zinc-600">
             {dates.wedding.toLocaleDateString(undefined, { weekday: "long" })}
-          </span>
-        </span>
-      </p>
+          </p>
+        </div>
+      </div>
 
       <div className="flex flex-col justify-center gap-16 md:flex-row md:gap-32">
         <div>

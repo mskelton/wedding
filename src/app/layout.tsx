@@ -24,7 +24,7 @@ const sans = Roboto_Flex({
 
 export const metadata: Metadata = {
   description: "The story of two who became one.",
-  title: "Mark & Woman",
+  title: "Mark & Rianna",
 }
 
 export default function RootLayout({
