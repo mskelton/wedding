@@ -49,7 +49,7 @@ export function ThemeToggle() {
   return process.env.NODE_ENV === "production" ? null : (
     <button
       aria-label="Set website theme"
-      className="size-10 px-2 py-1 text-sm text-black transition-colors hover:text-rose-500 dark:text-white dark:hover:text-rose-500"
+      className="size-10 px-2 py-1 text-sm hover:text-rose-500"
       onClick={() => handleChange(themeEffect() === "dark" ? "light" : "dark")}
       type="button"
     >

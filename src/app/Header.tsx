@@ -1,8 +1,5 @@
-"use client"
-
 import clsx from "clsx"
 import { ThemeToggle } from "./components/ThemeToggle"
-import { useRSVP } from "./RVSPProvider"
 
 function Item({
   children,
@@ -23,9 +20,9 @@ function Item({
     <li>
       <Component
         className={clsx(
-          "rounded-md px-3 py-1 transition-colors",
+          "px-3 py-1",
           variant === "primary" &&
-            "bg-zinc-900 text-white hover:bg-rose-500 dark:bg-white dark:text-black dark:hover:bg-rose-500 dark:hover:text-white",
+            "border border-zinc-900 hover:bg-white dark:border-white",
           variant === "secondary" && "hover:text-rose-500",
           className,
         )}
@@ -39,14 +36,11 @@ function Item({
 }
 
 export function Header() {
-  const { open } = useRSVP()
-
   return (
-    // TODO: blur
     <header
       className={clsx(
-        "fixed top-0 z-10 flex h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 dark:bg-zinc-900 dark:text-white",
-        "animate-[header_1ms_linear_both] transition-colors duration-300 [animation-range:0_800px] [animation-timeline:scroll()]",
+        "fixed top-0 z-10 flex h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 dark:bg-zinc-900",
+        "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
     >
       <p className="font-cursive text-4xl">MR</p>
@@ -57,9 +51,6 @@ export function Header() {
           <Item href="#our-story">Our Story</Item>
           <Item href="#faqs">FAQs</Item>
           <Item href="#travel">Travel</Item>
-          <Item onClick={open} variant="primary">
-            RSVP
-          </Item>
 
           <ThemeToggle />
         </ul>

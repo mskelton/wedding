@@ -18,14 +18,22 @@ const config: Config = {
       },
       keyframes: ({ theme }) => ({
         header: {
-          from: {
+          "0%": {
             backdropFilter: "blur(0)",
             background: "transparent",
+            color: theme("colors.white"),
           },
-          to: {
+          "20%": {
+            color: theme("colors.white"),
+          },
+          "21%": {
+            color: theme("colors.black"),
+          },
+          "100%": {
             backdropFilter: "blur(8px)",
             background: "var(--tw-header-scroll-bg)",
             boxShadow: theme("boxShadow.md"),
+            color: theme("colors.black"),
           },
         },
         pop: {
