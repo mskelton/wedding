@@ -43,7 +43,9 @@ export function Header() {
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
     >
-      <p className="font-cursive text-4xl">MR</p>
+      <p aria-hidden className="mt-1 font-cursive text-5xl tracking-wide">
+        MR
+      </p>
 
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4 text-xl">

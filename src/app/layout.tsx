@@ -1,22 +1,27 @@
 import "./globals.css"
 import clsx from "clsx"
 import type { Metadata } from "next"
-import { BioRhyme, Dancing_Script, Roboto_Flex } from "next/font/google"
+import {
+  BioRhyme as Serif,
+  Roboto_Flex as Sans,
+  Rouge_Script as Cursive,
+} from "next/font/google"
 import { themeEffect } from "./lib/themeEffect"
 
-const cursive = Dancing_Script({
+const cursive = Cursive({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-cursive",
+  weight: "400",
 })
 
-const serif = BioRhyme({
+const serif = Serif({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-serif",
 })
 
-const sans = Roboto_Flex({
+const sans = Sans({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-sans",

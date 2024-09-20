@@ -39,7 +39,7 @@ export function WeddingDateCounter() {
   }, [])
 
   return (
-    <p className="inline-flex gap-2 text-lg">
+    <p className="flex justify-center gap-2 text-lg">
       <Item label="Days" value={days} />
       <Item label="Hours" value={hours} />
       <Item label="Minutes" value={minutes} />
