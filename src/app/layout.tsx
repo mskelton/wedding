@@ -6,7 +6,7 @@ import {
   Roboto_Flex as Sans,
   Rouge_Script as Cursive,
 } from "next/font/google"
-import { themeEffect } from "./lib/themeEffect"
+import { themeEffect } from "./utils/themeEffect"
 
 const cursive = Cursive({
   display: "swap",
@@ -44,7 +44,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{ __html: `(${themeEffect.toString()})();` }}
         />
-        <link href="/favicon.ico" rel="icon" />
+        <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </head>
 
       <body
