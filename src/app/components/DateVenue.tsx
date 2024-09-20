@@ -1,5 +1,5 @@
-import { dates } from "../lib/date"
-import { styled } from "../lib/styled"
+import { dates } from "../utils/date"
+import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import { PageSection, PageSectionTitle } from "./Section"
 

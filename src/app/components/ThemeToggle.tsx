@@ -2,7 +2,7 @@
 
 import { MoonIcon, SunIcon } from "@heroicons/react/20/solid"
 import { useEffect } from "react"
-import { themeEffect } from "../lib/themeEffect"
+import { themeEffect } from "../utils/themeEffect"
 
 function handleChange(value: string) {
   if (value === "system") {

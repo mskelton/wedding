@@ -1,6 +1,6 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
-import { styled } from "../lib/styled"
+import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import { PageSection, PageSectionTitle } from "./Section"
 

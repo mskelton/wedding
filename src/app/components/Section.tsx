@@ -1,4 +1,4 @@
-import { styled } from "../lib/styled"
+import { styled } from "../utils/styled"
 
 export const PageSection = styled.section(
   "my-20 md:my-40 scroll-mt-32 px-8 dark:text-white",

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { dates } from "../lib/date"
+import { dates } from "../utils/date"
 
 function Item({ label, value }: { label: string; value: number }) {
   return (

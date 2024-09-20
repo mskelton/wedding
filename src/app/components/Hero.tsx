@@ -10,7 +10,7 @@ export function Hero() {
   const { open } = useRSVP()
 
   return (
-    <section className="relative h-screen">
+    <section className="dark relative h-screen">
       <div className="after:absolute after:inset-0 after:bg-black/60">
         <Image
           alt="A photo of the couple"

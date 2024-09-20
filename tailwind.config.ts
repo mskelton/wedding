@@ -29,6 +29,22 @@ const config: Config = {
             boxShadow: theme("boxShadow.md"),
           },
         },
+        "modal-fade": {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
+        "modal-zoom": {
+          from: {
+            transform: "scale(0.8)",
+          },
+          to: {
+            transform: "scale(1)",
+          },
+        },
         pop: {
           from: {
             transform: "scale(0.85)",
