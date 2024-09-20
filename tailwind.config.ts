@@ -21,28 +21,19 @@ const config: Config = {
           "0%": {
             backdropFilter: "blur(0)",
             background: "transparent",
-            color: theme("colors.white"),
-          },
-          "20%": {
-            color: theme("colors.white"),
-          },
-          "21%": {
-            color: theme("colors.black"),
+            boxShadow: "none",
           },
           "100%": {
             backdropFilter: "blur(8px)",
-            background: "var(--tw-header-scroll-bg)",
+            background: theme("colors.zinc.900 / 0.75"),
             boxShadow: theme("boxShadow.md"),
-            color: theme("colors.black"),
           },
         },
         pop: {
           from: {
-            opacity: "0.5",
             transform: "scale(0.85)",
           },
           to: {
-            opacity: "1",
             transform: "scale(1)",
           },
         },

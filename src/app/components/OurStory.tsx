@@ -12,7 +12,7 @@ export function OurStory() {
       <div className="mx-auto mb-16 max-w-screen-md">
         <Image
           alt=""
-          className="w-full animate-[1ms_pop_linear] [animation-range:0_50%] [animation-timeline:view()]"
+          className="w-full animate-[1ms_pop_linear] [animation-range:0_30%] [animation-timeline:view()]"
           src={ourStoryImage}
         />
       </div>

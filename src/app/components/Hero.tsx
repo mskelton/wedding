@@ -5,7 +5,7 @@ import { WeddingDateCounter } from "./WeddingDateCounter"
 export function Hero() {
   return (
     <section className="relative h-screen">
-      <div className="after:absolute after:inset-0 after:bg-black/50">
+      <div className="after:absolute after:inset-0 after:bg-black/60">
         <Image
           alt="A photo of the couple"
           className="object-cover"
