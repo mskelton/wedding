@@ -1,20 +1,19 @@
 import { useId } from "react"
-import { Input } from "./Input"
+import { Input, InputProps } from "./Input"
 import { Label } from "./Label"
 
-export type TextFieldProps = {
+export type TextFieldProps = InputProps & {
   className?: string
   label: string
-  name: string
 }
 
-export function TextField({ className, label, name }: TextFieldProps) {
+export function TextField({ className, label, ...props }: TextFieldProps) {
   const id = useId()
 
   return (
     <div className={className}>
       <Label htmlFor={id}>{label}</Label>
-      <Input id={id} name={name} />
+      <Input id={id} {...props} />
     </div>
   )
 }

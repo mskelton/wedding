@@ -10,15 +10,17 @@ const nextConfig = {
     mdxRs: true,
   },
   images: {
-    minimumCacheTTL: 3600, // 1 hour
+    minimumCacheTTL: 3600,
+    // 1 hour
     remotePatterns: [
       {
         hostname: "picsum.photos",
         protocol: "https",
       },
     ],
+    unoptimized: true,
   },
-  output: "standalone",
+  output: "export",
   pageExtensions: ["ts", "tsx", "mdx"],
   reactStrictMode: true,
 }
