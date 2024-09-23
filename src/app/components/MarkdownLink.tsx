@@ -13,5 +13,12 @@ export function MarkdownLink({
   const Component = isRSVPLink ? "button" : "a"
   const onClick = isRSVPLink ? open : undefined
 
-  return <Component {...props} href={href} onClick={onClick} />
+  return (
+    <Component
+      {...props}
+      className="text-blue-500 hover:underline"
+      href={href}
+      onClick={onClick}
+    />
+  )
 }

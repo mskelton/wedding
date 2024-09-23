@@ -1,4 +1,5 @@
 import clsx from "clsx"
+import Link from "next/link"
 import { ThemeToggle } from "./components/ThemeToggle"
 
 function Item({
@@ -43,9 +44,13 @@ export function Header() {
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
     >
-      <p aria-hidden className="mt-1 font-cursive text-5xl tracking-wide">
+      <Link
+        aria-hidden
+        className="mt-1 font-cursive text-5xl tracking-wide"
+        href="/"
+      >
         MR
-      </p>
+      </Link>
 
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4 text-xl">

@@ -17,15 +17,29 @@ import { NumberField } from "./components/NumberField"
 import { TextArea } from "./components/TextArea"
 import { TextField } from "./components/TextField"
 import { useRSVP } from "./RVSPProvider"
+import { db } from "./utils/db"
 
 export function RSVP() {
   const { close, isOpen } = useRSVP()
   const confettiRef = useRef<ConfettiRef | null>(null)
   const confetti = confettiRef.current?.confetti
 
-  function handleSubmit() {
-    fireConfetti(confetti)
-    close()
+  async function handleSubmit(formData: FormData) {
+    const { error } = await db.from("attendees").insert({
+      additional_attendees: parseInt(
+        formData.get("additional_attendees") as string,
+      ),
+      name: formData.get("name") as string,
+      notes: formData.get("notes") as string,
+    })
+
+    if (error) {
+      // TODO: Toast
+      console.log("error", error)
+    } else {
+      fireConfetti(confetti)
+      close()
+    }
   }
 
   return (
@@ -47,22 +61,12 @@ export function RSVP() {
   )
 }
 
-type FormData = {
-  guests: number
-  name: string
-}
-
 function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
   const { close } = useContext(OverlayTriggerStateContext)
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-
-    const formData = new FormData(event.currentTarget)
-    const name = formData.get("name") as string
-    const guests = parseInt(formData.get("guests") as string)
-
-    onSubmit({ guests, name })
+    onSubmit(new FormData(event.currentTarget))
   }
 
   return (
@@ -90,13 +94,13 @@ function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
           </FieldError>
         </TextField>
 
-        <NumberField defaultValue={0} minValue={0} name="guests">
-          <Label>Additional family members</Label>
+        <NumberField defaultValue={0} minValue={0} name="attendees">
+          <Label>Additional guests</Label>
           <Input />
         </NumberField>
 
         <TextField name="notes">
-          <Label>Other notes</Label>
+          <Label>Notes</Label>
           <TextArea className="resize-none" rows={3} />
         </TextField>
       </div>

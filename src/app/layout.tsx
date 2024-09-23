@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className="h-full scroll-smooth" lang="en" suppressHydrationWarning>
+    <html className="h-full" lang="en" suppressHydrationWarning>
       <head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <script

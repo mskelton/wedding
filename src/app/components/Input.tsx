@@ -8,7 +8,7 @@ export function useInputClassName({ className }: { className?: string }) {
   return clsx(
     "relative w-full border border-zinc-300 p-2 px-3 outline-none dark:border-zinc-700",
     "data-[focused]:border-zinc-500 dark:data-[focused]:border-zinc-500",
-    "dark:aria-[invalid]:border-red-500",
+    "aria-[invalid]:border-red-500 dark:aria-[invalid]:border-red-500",
     className,
   )
 }
