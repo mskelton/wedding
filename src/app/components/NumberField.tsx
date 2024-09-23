@@ -1,23 +1,10 @@
 "use client"
 
-import { useId } from "react"
-import { NumberField as AriaNumberField } from "react-aria-components"
-import { Input } from "./Input"
-import { Label } from "./Label"
+import {
+  NumberField as AriaNumberField,
+  NumberFieldProps as AriaNumberFieldProps,
+} from "react-aria-components"
 
-export type NumberFieldProps = {
-  className?: string
-  label: string
-  name: string
-}
-
-export function NumberField({ className, label, name }: NumberFieldProps) {
-  const id = useId()
-
-  return (
-    <AriaNumberField className={className} minValue={0}>
-      <Label htmlFor={id}>{label}</Label>
-      <Input id={id} name={name} />
-    </AriaNumberField>
-  )
+export function NumberField(props: AriaNumberFieldProps) {
+  return <AriaNumberField {...props} />
 }

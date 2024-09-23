@@ -1,4 +1,5 @@
 import canvasConfetti, { CreateTypes } from "canvas-confetti"
+import clsx from "clsx"
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react"
 
 export type ConfettiInstance = CreateTypes
@@ -7,11 +8,12 @@ export type ConfettiRef = {
   confetti: ConfettiInstance | undefined
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type ConfettiProps = {}
+export type ConfettiProps = {
+  className?: string
+}
 
 export const Confetti = forwardRef<ConfettiRef, ConfettiProps>(
-  function Confetti(_, ref) {
+  function Confetti({ className }, ref) {
     const canvasRef = useRef<HTMLCanvasElement | null>(null)
     const confetti = useRef<ConfettiInstance>()
 
@@ -22,7 +24,7 @@ export const Confetti = forwardRef<ConfettiRef, ConfettiProps>(
 
       confetti.current = canvasConfetti.create(canvasRef.current, {
         resize: true,
-        useWorker: false,
+        useWorker: true,
       })
 
       return () => {
@@ -35,7 +37,10 @@ export const Confetti = forwardRef<ConfettiRef, ConfettiProps>(
     return (
       <canvas
         ref={canvasRef}
-        className="pointer-events-none fixed inset-0 size-full"
+        className={clsx(
+          "pointer-events-none fixed left-0 top-0 size-full",
+          className,
+        )}
       />
     )
   },
