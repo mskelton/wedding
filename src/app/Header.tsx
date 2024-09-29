@@ -1,19 +1,16 @@
 import clsx from "clsx"
 import Link from "next/link"
-import { ThemeToggle } from "./components/ThemeToggle"
 
 function Item({
   children,
   className,
   href,
   onClick,
-  variant = "secondary",
 }: {
   children: React.ReactNode
   className?: string
   href?: string
   onClick?: () => void
-  variant?: "primary" | "secondary"
 }) {
   const Component = href ? "a" : "button"
 
@@ -21,10 +18,7 @@ function Item({
     <li>
       <Component
         className={clsx(
-          "px-3 py-1",
-          variant === "primary" &&
-            "border border-zinc-900 hover:bg-white dark:border-white",
-          variant === "secondary" && "hover:text-rose-500",
+          "px-3 py-1 transition-colors dark:hover:bg-white dark:hover:text-zinc-900",
           className,
         )}
         href={href}
@@ -43,11 +37,12 @@ export function Header() {
         "sticky top-0 z-10 -mt-[--header-height] flex h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 text-white dark:bg-zinc-900",
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
+      id="home"
     >
       <Link
         aria-hidden
         className="mt-1 font-cursive text-5xl tracking-wide"
-        href="/"
+        href="#home"
       >
         MR
       </Link>
@@ -58,8 +53,6 @@ export function Header() {
           <Item href="#our-story">Our Story</Item>
           <Item href="#faqs">FAQs</Item>
           <Item href="#travel">Travel</Item>
-
-          <ThemeToggle />
         </ul>
       </nav>
     </header>

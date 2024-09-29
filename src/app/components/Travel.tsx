@@ -1,8 +1,9 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
+import travelImageSrc from "../assets/our-story.jpg"
 import { styled } from "../utils/styled"
 import { Button } from "./Button"
-import { PageSection, PageSectionTitle } from "./Section"
+import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
 
 const Content = styled.div("mx-auto max-w-2xl text-center space-y-12")
 const Section = styled.div("space-y-4")
@@ -13,6 +14,8 @@ export function Travel() {
   return (
     <PageSection id="travel">
       <PageSectionTitle>Travel</PageSectionTitle>
+      <PageSectionImage alt="Travel" src={travelImageSrc} />
+
       <Content>
         <Section>
           <Header>Stay</Header>
