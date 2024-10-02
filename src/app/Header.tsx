@@ -1,31 +1,19 @@
 import clsx from "clsx"
 import Link from "next/link"
+import { Button } from "./components/Button"
 
-function Item({
-  children,
-  className,
-  href,
-  onClick,
-}: {
-  children: React.ReactNode
-  className?: string
-  href?: string
-  onClick?: () => void
-}) {
-  const Component = href ? "a" : "button"
-
+function Item({ children, href }: { children: React.ReactNode; href: string }) {
   return (
     <li>
-      <Component
-        className={clsx(
-          "px-3 py-1 transition-colors dark:hover:bg-white dark:hover:text-zinc-900",
-          className,
-        )}
+      <Button
+        className="px-3 py-1"
+        color="primary"
         href={href}
-        onClick={onClick}
+        size="lg"
+        variant="ghost"
       >
         {children}
-      </Component>
+      </Button>
     </li>
   )
 }
