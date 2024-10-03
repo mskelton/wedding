@@ -1,4 +1,3 @@
-import ourStoryImage from "../assets/our-story.jpg"
 import { Prose } from "./Prose"
 import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
 
@@ -6,7 +5,7 @@ export function OurStory() {
   return (
     <PageSection id="our-story">
       <PageSectionTitle>Our Story</PageSectionTitle>
-      <PageSectionImage alt="" src={ourStoryImage} />
+      <PageSectionImage alt="" src="/images/our-story.jpg" />
 
       <Prose>
         <p>

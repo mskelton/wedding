@@ -1,4 +1,3 @@
-import faqImageSrc from "../assets/our-story.jpg"
 import { useRSVP } from "../RVSPProvider"
 import { styled } from "../utils/styled"
 import { Prose } from "./Prose"
@@ -13,7 +12,7 @@ export function FAQs() {
   return (
     <PageSection id="faqs">
       <PageSectionTitle>FAQs</PageSectionTitle>
-      <PageSectionImage alt="FAQs" src={faqImageSrc} />
+      <PageSectionImage alt="FAQs" src="/images/our-story.jpg" />
 
       <Prose>
         <Question>When is the RSVP deadline?</Question>

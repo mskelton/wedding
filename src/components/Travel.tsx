@@ -1,6 +1,5 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
-import travelImageSrc from "../assets/our-story.jpg"
 import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
@@ -14,7 +13,7 @@ export function Travel() {
   return (
     <PageSection id="travel">
       <PageSectionTitle>Travel</PageSectionTitle>
-      <PageSectionImage alt="Travel" src={travelImageSrc} />
+      <PageSectionImage alt="Travel" src="/images/our-story.jpg" />
 
       <Content>
         <Section>
