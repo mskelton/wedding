@@ -6,6 +6,7 @@ import {
   Roboto_Flex as Sans,
   Rouge_Script as Cursive,
 } from "next/font/google"
+import { themeEffect } from "./utils/themeEffect"
 
 const cursive = Cursive({
   display: "swap",
@@ -37,16 +38,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      className="dark h-full scroll-smooth [color-scheme:dark]"
-      lang="en"
-      suppressHydrationWarning
-    >
+    <html className="h-full scroll-smooth" lang="en" suppressHydrationWarning>
       <head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        {/* <script */}
-        {/*   dangerouslySetInnerHTML={{ __html: `(${themeEffect.toString()})();` }} */}
-        {/* /> */}
+        <script
+          dangerouslySetInnerHTML={{ __html: `(${themeEffect.toString()})();` }}
+        />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
       </head>
 
