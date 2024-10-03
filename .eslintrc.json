@@ -1,9 +1,12 @@
 {
-  "extends": ["@mskelton", "@mskelton/eslint-config/react", "next"],
-  "plugins": ["mskelton"],
+  "extends": [
+    "@mskelton",
+    "@mskelton/eslint-config/react",
+    "plugin:local-rules/all"
+  ],
+  "plugins": ["local-rules"],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "mskelton/no-unescaped-quotes": "error"
+    "react/no-unescaped-entities": "off"
   },
   "overrides": [
     {
