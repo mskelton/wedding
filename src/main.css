@@ -3,21 +3,18 @@
 @tailwind utilities;
 
 @font-face {
-  font-display: swap;
   font-family: "BioRhyme";
   src: url("./assets/fonts/BioRhyme-Variable.ttf");
   unicode-range: U+0000-00FF;
 }
 
 @font-face {
-  font-display: swap;
   font-family: "RobotoFlex";
   src: url("./assets/fonts/RobotoFlex-Variable.ttf");
   unicode-range: U+0000-00FF;
 }
 
 @font-face {
-  font-display: swap;
   font-family: "RogueScript";
   font-weight: 400;
   src: url("./assets/fonts/RougeScript-Regular.ttf");

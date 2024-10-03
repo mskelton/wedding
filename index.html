@@ -1,9 +1,38 @@
 <html className="h-full scroll-smooth" lang="en">
   <head>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <!-- <script -->
-    <!--   dangerouslySetInnerHTML={{ __html: `(${themeEffect.toString()})();` }} -->
-    <!-- /> -->
+    <link
+      rel="preload"
+      href="/src/assets/hero.jpg"
+      as="image"
+      type="image/jpeg"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/BioRhyme-Variable.ttf"
+      as="font"
+      crossorigin
+      type="font/ttf"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/RobotoFlex-Variable.ttf"
+      as="font"
+      crossorigin
+      type="font/ttf"
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/RogueScript-Regular.ttf"
+      as="font"
+      crossorigin
+      type="font/ttf"
+    />
+    <script type="module">
+      import { themeEffect } from "./src/utils/themeEffect.ts"
+      // TODO
+      themeEffect()
+    </script>
     <title>Mark & Rianna</title>
     <meta name="description" content="The story of two who became one." />
     <link href="/favicon.svg" rel="icon" type="image/svg+xml" />

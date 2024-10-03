@@ -13,8 +13,6 @@ function handleChange(value: string) {
 }
 
 export function useThemeToggle() {
-  themeEffect()
-
   useEffect(() => {
     const controller = new AbortController()
     const { signal } = controller
