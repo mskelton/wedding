@@ -25,7 +25,7 @@ export function Hero() {
 
         <WeddingDateCounter />
 
-        <Button className="px-10" onClick={open} size="xl">
+        <Button className="px-10" onPress={open} size="xl">
           RSVP
         </Button>
       </div>

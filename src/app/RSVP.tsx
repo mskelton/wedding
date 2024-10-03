@@ -106,7 +106,7 @@ function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
       </div>
 
       <div className="flex justify-end gap-4">
-        <Button color="secondary" onClick={close} size="lg" variant="ghost">
+        <Button color="secondary" onPress={close} size="lg" variant="ghost">
           Cancel
         </Button>
 

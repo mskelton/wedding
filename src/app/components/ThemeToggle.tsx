@@ -14,39 +14,35 @@ function handleChange(value: string) {
   themeEffect()
 }
 
-export function ThemeToggle() {
+export function useThemeToggle() {
   useEffect(() => {
-    // React to storage changes in other tabs
-    function handleStorageChange(event: StorageEvent) {
-      if (event.key === "theme") {
-        themeEffect()
-      }
-    }
-    window.addEventListener("storage", handleStorageChange)
+    const controller = new AbortController()
+    const { signal } = controller
 
-    // Theme switch keyboard shortcut
-    function handleKeyDown(event: KeyboardEvent) {
-      // Allow quick switching the theme when holding down cmd/ctrl
-      if ((event.metaKey || event.ctrlKey) && event.key === "d") {
-        handleChange(themeEffect() === "dark" ? "light" : "dark")
-        themeEffect()
-      }
-    }
-    document.addEventListener("keydown", handleKeyDown)
+    // React to storage changes in other tabs
+    window.addEventListener(
+      "storage",
+      (event) => {
+        if (event.key === "theme") {
+          themeEffect()
+        }
+      },
+      { signal },
+    )
 
     // Refresh the theme when the user changes their system theme. If the user
     // set a preference, this will be ignored.
     const matchMedia = window.matchMedia("(prefers-color-scheme: dark)")
-    matchMedia.addEventListener("change", themeEffect)
+    matchMedia.addEventListener("change", themeEffect, { signal })
 
-    return () => {
-      window.removeEventListener("storage", handleStorageChange)
-      document.removeEventListener("keydown", handleKeyDown)
-      matchMedia.removeEventListener("change", themeEffect)
-    }
+    return () => controller.abort()
   }, [])
+}
 
-  return process.env.NODE_ENV === "production" ? null : (
+export function ThemeToggle() {
+  useThemeToggle()
+
+  return (
     <button
       aria-label="Set website theme"
       className="size-10 px-2 py-1 text-sm hover:text-rose-500"

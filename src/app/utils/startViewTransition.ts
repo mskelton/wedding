@@ -1,4 +1,4 @@
-interface Document {
+type Document = {
   startViewTransition?(callback: () => void): void
 }
 
