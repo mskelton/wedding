@@ -17,15 +17,15 @@ export function PageSectionImage({
   src: string
 }) {
   return (
-    <div className="mx-auto mb-16 max-w-screen-md">
+    <div className="relative mx-auto mb-8 h-[200px] w-[800px] max-w-full md:h-[400px]">
       <img
         alt={alt}
         className={clsx(
-          "w-full",
+          "absolute size-full object-cover",
           animate &&
             "animate-[1ms_pop_linear] [animation-range:0_60%] [animation-timeline:view()]",
         )}
-        loading="eager"
+        decoding="async"
         src={src}
       />
     </div>

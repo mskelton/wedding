@@ -24,10 +24,9 @@ export function Header() {
         "dark sticky top-0 z-10 -mt-[--header-height] flex h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 text-white dark:bg-zinc-900",
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
-      id="home"
     >
       <a
-        aria-hidden
+        aria-label="Back to top"
         className="mt-1 font-cursive text-5xl tracking-wide"
         href="#home"
       >

@@ -8,7 +8,7 @@ import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
 const Content = styled.div("mx-auto max-w-2xl text-center space-y-12")
 const Section = styled.div("space-y-4")
 const Header = styled.p("mb-6 text-4xl")
-const CardGrid = styled.div("grid grid-cols-2 gap-2")
+const CardGrid = styled.div("grid grid-cols-1 sm:grid-cols-2 gap-2")
 
 export function Travel() {
   return (
@@ -107,7 +107,9 @@ function Card({
     <div
       className={clsx(
         "group relative grid items-center gap-6 border border-zinc-200 p-3 text-left dark:border-zinc-700",
-        action || href ? "grid-cols-[1fr,auto]" : "grid-cols-1",
+        "grid-cols-1",
+        action && "sm:grid-cols-[1fr,auto]",
+        href && "grid-cols-[1fr,auto]",
         href &&
           "transition-colors hover:bg-zinc-100/50 dark:hover:bg-zinc-800/50",
       )}

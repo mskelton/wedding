@@ -66,7 +66,7 @@ export function Button({
     <Component
       className={twMerge(
         // Isolation is required or it will have a subtle blend with the background
-        "relative isolate bg-transparent",
+        "relative isolate bg-transparent text-center",
         // Text has to be white so that when we apply the filter, it inverts to
         // black. Without an explicit text color, the filter will not have
         // anything to invert and it will result in white text on white background.

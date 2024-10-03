@@ -1,4 +1,5 @@
 import heroImage from "../assets/hero.jpg"
+import heroImageMobile from "../assets/hero-mobile.jpg"
 import { useRSVP } from "../RVSPProvider"
 import { Button } from "./Button"
 import { WeddingDateCounter } from "./WeddingDateCounter"
@@ -9,11 +10,14 @@ export function Hero() {
   return (
     <section className="dark relative h-screen">
       <div className="after:absolute after:inset-0 after:bg-black/60">
-        <img
-          alt="A photo of the couple"
-          className="size-full object-cover"
-          src={heroImage}
-        />
+        <picture>
+          <source media="(max-width: 767px)" srcSet={heroImageMobile} />
+          <img
+            alt="A photo of the couple"
+            className="size-full object-cover"
+            src={heroImage}
+          />
+        </picture>
       </div>
 
       <div className="absolute bottom-20 left-0 right-0 space-y-8 text-center text-white">

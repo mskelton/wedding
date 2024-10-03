@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <RVSPProvider>
       <div style={{ "--header-height": "4rem" } as React.CSSProperties}>
+        <div id="home" />
         <Header />
         <RSVP />
 

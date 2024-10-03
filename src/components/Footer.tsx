@@ -2,7 +2,7 @@ import { FaceSmileIcon, HeartIcon } from "@heroicons/react/20/solid"
 
 export function Footer() {
   return (
-    <div className="py-8 text-center text-sm dark:text-gray-500">
+    <div className="p-8 text-center text-sm dark:text-gray-500">
       <p className="mb-2">
         Made with <HeartIcon className="inline size-4 text-red-500" /> by Mark
         Skelton. Yeah, I built my own wedding website{" "}
