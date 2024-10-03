@@ -20,3 +20,9 @@
   src: url("./assets/fonts/RougeScript-Regular.ttf");
   unicode-range: U+0000-00FF;
 }
+
+:root.pause-transitions *,
+:root.pause-transitions *::before,
+:root.pause-transitions *::after {
+  transition: none !important;
+}

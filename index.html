@@ -28,10 +28,23 @@
       crossorigin
       type="font/ttf"
     />
-    <script type="module">
-      import { themeEffect } from "./src/utils/themeEffect.ts"
-      // TODO
-      themeEffect()
+    <script>
+      const pref = localStorage.getItem("theme")
+
+      if (
+        pref === "dark" ||
+        (!pref && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("pause-transitions")
+        document.documentElement.classList.add("dark", "[color-scheme:dark]")
+      } else {
+        document.documentElement.classList.add("pause-transitions")
+        document.documentElement.classList.remove("dark", "[color-scheme:dark]")
+      }
+
+      requestAnimationFrame(() => {
+        document.documentElement.classList.remove("pause-transitions")
+      })
     </script>
     <title>Mark & Rianna</title>
     <meta name="description" content="The story of two who became one." />
