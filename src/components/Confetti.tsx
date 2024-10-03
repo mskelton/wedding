@@ -38,7 +38,9 @@ export const Confetti = forwardRef<ConfettiRef, ConfettiProps>(
       <canvas
         ref={canvasRef}
         className={clsx(
-          "pointer-events-none fixed left-0 top-0 size-full",
+          // Make the canvas double the screen size on mobile so it covers
+          // a wider spread of the screen.
+          "pointer-events-none fixed left-[-50%] top-0 h-screen w-[200vw] md:left-0 md:size-full",
           className,
         )}
       />
