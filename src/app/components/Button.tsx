@@ -34,7 +34,7 @@ export function Button({
   return (
     <Component
       className={twMerge(
-        "white relative isolate overflow-hidden bg-transparent",
+        "relative isolate overflow-hidden bg-transparent",
         "before:absolute before:left-1/2 before:top-0 before:z-10 before:h-full before:w-0 before:transition-[left,width] before:duration-200",
         "hover:before:left-0 hover:before:w-full",
         variant === "outline" &&
