@@ -4,20 +4,20 @@
 
 @font-face {
   font-family: "BioRhyme";
-  src: url("./assets/fonts/BioRhyme-Variable.ttf");
+  src: url("/fonts/BioRhyme-Variable.ttf");
   unicode-range: U+0000-00FF;
 }
 
 @font-face {
   font-family: "RobotoFlex";
-  src: url("./assets/fonts/RobotoFlex-Variable.ttf");
+  src: url("/fonts/RobotoFlex-Variable.ttf");
   unicode-range: U+0000-00FF;
 }
 
 @font-face {
   font-family: "RogueScript";
   font-weight: 400;
-  src: url("./assets/fonts/RougeScript-Regular.ttf");
+  src: url("/fonts/RougeScript-Regular.ttf");
   unicode-range: U+0000-00FF;
 }
 
