@@ -18,7 +18,7 @@ export function Hero() {
         </picture>
       </div>
 
-      <div className="absolute bottom-20 left-0 right-0 space-y-8 text-center text-white">
+      <div className="absolute bottom-20 left-0 right-0 space-y-8 px-4 text-center text-white">
         <h1 className="font-cursive text-8xl">Mark &amp; Rianna</h1>
 
         <WeddingDateCounter />

@@ -105,7 +105,7 @@ function Card({
   return (
     <div
       className={clsx(
-        "group relative grid items-center gap-6 border border-zinc-200 p-3 text-left dark:border-zinc-700",
+        "group relative isolate grid items-center gap-6 border border-zinc-200 p-3 text-left dark:border-zinc-700",
         "grid-cols-1",
         action && "sm:grid-cols-[1fr,auto]",
         href && "grid-cols-[1fr,auto]",

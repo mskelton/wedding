@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header
       className={clsx(
-        "dark sticky top-0 z-10 -mt-[--header-height] flex h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 text-white dark:bg-zinc-900",
+        "dark sticky top-0 z-10 -mt-[--header-height] hidden h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 text-white dark:bg-zinc-900 md:flex",
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
     >

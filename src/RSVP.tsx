@@ -43,12 +43,12 @@ export function RSVP() {
   return (
     <>
       <ModalOverlay
-        className="fixed inset-0 z-40 flex h-[--visual-viewport-height] w-screen items-center justify-center bg-zinc-950/80 p-4 data-[entering]:animate-[modal-fade_200ms] data-[exiting]:animate-[modal-fade_150ms_reverse_ease-in]"
+        className="fixed inset-0 z-40 flex h-[--visual-viewport-height] w-screen items-center justify-center bg-zinc-950/80 data-[entering]:animate-[modal-fade_200ms] data-[exiting]:animate-[modal-fade_150ms_reverse_ease-in] sm:p-4"
         isOpen={isOpen}
         onOpenChange={close}
       >
         <Modal className="data-[entering]:animate-[modal-zoom_300ms_cubic-bezier(0.175,0.885,0.32,1.275)]">
-          <Dialog className="max-w-xl border bg-white p-10 dark:border-zinc-700 dark:bg-zinc-950">
+          <Dialog className="size-full overflow-y-auto bg-white p-10 dark:border-zinc-700 dark:bg-zinc-950 sm:h-auto sm:max-h-full sm:max-w-xl sm:border">
             <RSVPForm onSubmit={handleSubmit} />
           </Dialog>
         </Modal>
