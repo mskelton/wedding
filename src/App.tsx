@@ -4,30 +4,27 @@ import { Footer } from "./components/Footer"
 import { Hero } from "./components/Hero"
 import { OurStory } from "./components/OurStory"
 import { useThemeToggle } from "./components/ThemeToggle"
-import { Travel } from "./components/Travel"
+import { Gallery } from "./Gallery"
 import { Header } from "./Header"
 import { RSVP } from "./RSVP"
-import { RVSPProvider } from "./RVSPProvider"
 
 export default function Home() {
   useThemeToggle()
 
   return (
-    <RVSPProvider>
-      <div style={{ "--header-height": "4rem" } as React.CSSProperties}>
-        <div id="home" />
-        <Header />
-        <RSVP />
+    <div style={{ "--header-height": "4rem" } as React.CSSProperties}>
+      <div id="home" />
+      <Header />
 
-        <main>
-          <Hero />
-          <DateVenue />
-          <OurStory />
-          <FAQs />
-          <Travel />
-          <Footer />
-        </main>
-      </div>
-    </RVSPProvider>
+      <main>
+        <Hero />
+        <OurStory />
+        <DateVenue />
+        <Gallery />
+        <RSVP />
+        <FAQs />
+        <Footer />
+      </main>
+    </div>
   )
 }

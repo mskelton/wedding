@@ -1,24 +1,21 @@
-import { useContext, useRef } from "react"
-import {
-  Dialog,
-  Heading,
-  Modal,
-  ModalOverlay,
-  OverlayTriggerStateContext,
-} from "react-aria-components"
+import { useRef } from "react"
 import { Button } from "./components/Button"
 import { Confetti, ConfettiInstance, ConfettiRef } from "./components/Confetti"
 import { FieldError } from "./components/FieldError"
 import { Input } from "./components/Input"
 import { Label } from "./components/Label"
 import { NumberField } from "./components/NumberField"
+import {
+  PageSection,
+  PageSectionSeparator,
+  PageSectionSubtitle,
+  PageSectionTitle,
+} from "./components/Section"
 import { TextArea } from "./components/TextArea"
 import { TextField } from "./components/TextField"
-import { useRSVP } from "./RVSPProvider"
 import { db } from "./utils/db"
 
 export function RSVP() {
-  const { close, isOpen } = useRSVP()
   const confettiRef = useRef<ConfettiRef | null>(null)
   const confetti = confettiRef.current?.confetti
 
@@ -42,17 +39,15 @@ export function RSVP() {
 
   return (
     <>
-      <ModalOverlay
-        className="fixed inset-0 z-40 flex h-[--visual-viewport-height] w-screen items-center justify-center bg-zinc-950/80 data-[entering]:animate-[modal-fade_200ms] data-[exiting]:animate-[modal-fade_150ms_reverse_ease-in] sm:p-4"
-        isOpen={isOpen}
-        onOpenChange={close}
-      >
-        <Modal className="data-[entering]:animate-[modal-zoom_300ms_cubic-bezier(0.175,0.885,0.32,1.275)]">
-          <Dialog className="size-full overflow-y-auto bg-white p-10 dark:border-zinc-700 dark:bg-zinc-950 sm:h-auto sm:max-h-full sm:max-w-xl sm:border">
-            <RSVPForm onSubmit={handleSubmit} />
-          </Dialog>
-        </Modal>
-      </ModalOverlay>
+      <PageSection id="rsvp">
+        <PageSectionTitle>RSVP</PageSectionTitle>
+        <PageSectionSubtitle>
+          We can’t wait to see you there!
+        </PageSectionSubtitle>
+        <PageSectionSeparator />
+
+        <RSVPForm onSubmit={handleSubmit} />
+      </PageSection>
 
       <Confetti ref={confettiRef} className="z-50" />
     </>
@@ -60,29 +55,17 @@ export function RSVP() {
 }
 
 function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
-  const { close } = useContext(OverlayTriggerStateContext)
-
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     onSubmit(new FormData(event.currentTarget))
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Heading className="mb-4 text-2xl" slot="title">
-        We’re glad you’re coming!
-      </Heading>
-
-      <div className="mb-12 space-y-6 font-sans">
-        <p className="text-zinc-800 dark:text-zinc-400">
-          We are excited to have you join us for our special day. Let us know
-          your name and how many of your family will be joining you. We welcome
-          plus ones, but please ask before bringing any additional guests.
-        </p>
-
-        <TextField autoFocus isRequired name="name">
+    <form className="mx-auto w-full max-w-lg" onSubmit={handleSubmit}>
+      <div className="space-y-6 font-sans">
+        <TextField autoComplete="name" autoFocus isRequired name="name">
           <Label>Your name</Label>
-          <Input />
+          <Input data-1p-ignore />
           <FieldError>
             {({ validationDetails }) =>
               validationDetails.valueMissing
@@ -101,14 +84,8 @@ function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
           <Label>Notes</Label>
           <TextArea className="resize-none" rows={3} />
         </TextField>
-      </div>
 
-      <div className="flex justify-end gap-4">
-        <Button color="secondary" onPress={close} size="lg" variant="ghost">
-          Cancel
-        </Button>
-
-        <Button size="lg" type="submit">
+        <Button className="w-full" size="lg" type="submit">
           Submit
         </Button>
       </div>

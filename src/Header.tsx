@@ -35,10 +35,10 @@ export function Header() {
 
       <nav className="hidden md:block">
         <ul className="flex items-center gap-4 text-xl">
-          <Item href="#date-venue">Date &amp; Venue</Item>
           <Item href="#our-story">Our Story</Item>
+          <Item href="#date-venue">Date &amp; Venue</Item>
+          <Item href="#gallery">Gallery</Item>
           <Item href="#faqs">FAQs</Item>
-          <Item href="#travel">Travel</Item>
         </ul>
       </nav>
     </header>

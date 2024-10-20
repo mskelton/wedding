@@ -66,18 +66,18 @@ export function Button({
     <Component
       className={twMerge(
         // Isolation is required or it will have a subtle blend with the background
-        "relative isolate bg-transparent text-center",
+        "relative isolate inline-block bg-transparent text-center",
         // Text has to be white so that when we apply the filter, it inverts to
         // black. Without an explicit text color, the filter will not have
         // anything to invert and it will result in white text on white background.
         "text-white",
-        // The effect is on the pseudo-element, and we need it to start as zero-width
-        // in the center so it can transition out on hover.
-        "before:absolute before:left-1/2 before:top-0 before:z-10 before:h-full before:w-0",
+        // The effect is on the pseudo-element, starting as zero height at the
+        // bottom of the button.
+        "before:absolute before:bottom-0 before:left-0 before:right-0 before:z-10 before:h-0 before:w-full",
         // Transition
-        "before:transition-[left,width]",
-        // Expand from middle outward on hover
-        "hover:before:left-0 hover:before:w-full",
+        "before:transition-[height]",
+        // Expand from bottom upward on hover
+        "hover:before:h-full",
         // This is bizarre, but it works. It also reads a little strange since
         // the dark theme is actually the default in the case of this component
         // due to how blending modes work. This is why below you see

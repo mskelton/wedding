@@ -1,30 +1,22 @@
-import { useRSVP } from "../RVSPProvider"
 import { styled } from "../utils/styled"
 import { Prose } from "./Prose"
-import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
+import { PageSection, PageSectionTitle } from "./Section"
 
 const Question = styled.h3()
 const Answer = styled.p()
 
 export function FAQs() {
-  const { open } = useRSVP()
-
   return (
     <PageSection id="faqs">
       <PageSectionTitle>FAQs</PageSectionTitle>
-      <PageSectionImage alt="FAQs" src="/images/our-story.jpg" />
 
       <Prose>
         <Question>When is the RSVP deadline?</Question>
         <Answer>
           Please{" "}
-          <button
-            className="text-blue-500 hover:underline"
-            onClick={open}
-            type="button"
-          >
+          <a className="text-blue-500 hover:underline" href="#rsvp">
             RSVP
-          </button>{" "}
+          </a>{" "}
           now!
         </Answer>
 
@@ -66,8 +58,8 @@ export function FAQs() {
 
         <Question>Who should I contact with questions?</Question>
         <Answer>
-          Please reach out to maid-of-honor, Hannah 815-900-2053, if you have
-          any additional questions!
+          Please reach out to maid-of-honor, Sarah TODO, if you have any
+          additional questions!
         </Answer>
       </Prose>
     </PageSection>
