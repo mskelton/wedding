@@ -1,3 +1,4 @@
+import "./ZoomableImage.css"
 import "react-medium-image/styles.css"
 import { ArrowsPointingOutIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"

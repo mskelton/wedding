@@ -1,0 +1,9 @@
+@media (prefers-color-scheme: dark) {
+  .rmi-overlay {
+    background-color: rgba(0 0 0 / 0);
+  }
+
+  .rmi.open .rmi-overlay {
+    background-color: rgba(0 0 0 / 0.8);
+  }
+}
