@@ -28,11 +28,11 @@
 }
 
 :root {
-  --header-bg: theme("colors.white");
+  --header-bg: theme("colors.white / 0.75");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --header-bg: theme("colors.gray.900");
+    --header-bg: theme("colors.zinc.900 / 0.75");
   }
 }
