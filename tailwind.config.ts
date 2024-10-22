@@ -21,7 +21,7 @@ const config: Config = {
           },
           "100%": {
             backdropFilter: "blur(8px)",
-            background: theme("colors.zinc.900 / 0.75"),
+            background: "var(--header-bg)",
             boxShadow: theme("boxShadow.md"),
           },
         },

@@ -21,13 +21,13 @@ export function Header() {
   return (
     <header
       className={clsx(
-        "dark sticky top-0 z-10 -mt-[--header-height] hidden h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 text-white dark:bg-zinc-900 md:flex",
+        "sticky top-0 z-10 -mt-[--header-height] hidden h-[--header-height] w-full items-center justify-between bg-white bg-white/70 px-8 md:flex",
         "animate-[header_1ms_linear_both] [animation-range:0_800px] [animation-timeline:scroll()]",
       )}
     >
       <a
         aria-label="Back to top"
-        className="mt-1 font-cursive text-5xl tracking-wide"
+        className="mt-1 font-cursive text-5xl tracking-wide text-black dark:text-white"
         href="#home"
       >
         MR

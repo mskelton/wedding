@@ -26,3 +26,13 @@
 :root.pause-transitions *::after {
   transition: none !important;
 }
+
+:root {
+  --header-bg: theme("colors.white");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-bg: theme("colors.gray.900");
+  }
+}

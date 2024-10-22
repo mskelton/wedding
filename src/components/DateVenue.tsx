@@ -1,7 +1,12 @@
 import { dates } from "../utils/date"
 import { styled } from "../utils/styled"
 import { Button } from "./Button"
-import { PageSection, PageSectionImage, PageSectionTitle } from "./Section"
+import {
+  PageSection,
+  PageSectionFullWidth,
+  PageSectionImage,
+  PageSectionTitle,
+} from "./Section"
 
 const Text = styled.p("text-lg")
 const Location = styled.p(
@@ -13,9 +18,11 @@ const Time = styled.p("mb-4 text-xl text-gray-500 dark:text-gray-400")
 export function DateVenue() {
   return (
     <PageSection className="text-center" id="date-venue">
-      <PageSectionImage alt="TODO" src="/images/our-story.jpg" />
+      <PageSectionFullWidth>
+        <PageSectionImage alt="TODO" src="/images/our-story.jpg" />
+      </PageSectionFullWidth>
 
-      <div className="isolate mx-auto -mt-28 w-[1000px] bg-white p-20 dark:bg-zinc-950">
+      <div className="isolate mx-auto -mt-28 w-[1000px] max-w-[80vw] bg-white p-20 dark:bg-zinc-950">
         <PageSectionTitle className="mb-4">
           {dates.wedding.toLocaleDateString(undefined, {
             day: "numeric",
