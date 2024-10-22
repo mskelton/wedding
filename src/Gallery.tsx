@@ -1,4 +1,3 @@
-import clsx from "clsx"
 import ZoomableImage from "./components/ZoomableImage"
 
 const images = [
