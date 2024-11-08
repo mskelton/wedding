@@ -11,55 +11,46 @@ export function FAQs() {
       <PageSectionTitle>FAQs</PageSectionTitle>
 
       <Prose>
-        <Question>When is the RSVP deadline?</Question>
-        <Answer>
-          Please{" "}
-          <a className="text-blue-500 hover:underline" href="#rsvp">
-            RSVP
-          </a>{" "}
-          now!
-        </Answer>
-
         <Question>Is the wedding indoors or outdoors?</Question>
-        <Answer>
-          Both the ceremony and reception will be indoors with the reception in
-          a non-air-conditioned pole barn in the country. The reception location
-          has plenty of outdoor space to explore with grass paths and gravel
-          lanes.
-        </Answer>
+        <Answer>Both the ceremony and reception will be indoors.</Answer>
 
         <Question>What should I wear?</Question>
         <Answer>
-          You know us ;)! We care more about that you’re there than about what
-          you wear! Search wedding casual or wedding dressy casual to get an
-          idea of what most of our guests will probably be wearing.
+          As you probably know, we are both pretty casually in general, so while
+          the wedding party will be dressed up, we hope that you will attend
+          regardless of how formal or casual you choose to dress!
         </Answer>
 
         <Question>What time will the reception end?</Question>
         <Answer>
-          The bride and groom plan to leave at 8 pm. You’re welcome to stay
-          longer!
+          The bride and groom will be leaving the reception around 5:30 PM, but
+          you are more than welcome to stay as long as you would like! Just be
+          careful not to stay too late or you might get roped into helping the
+          cleanup crew!
+        </Answer>
+
+        <Question>Do you have a registry?</Question>
+        <Answer>
+          We are registered at{" "}
+          <a href="https://bedbathandbeyond.myregistry.com">
+            Bed Bath &amp; Beyond
+          </a>{" "}
+          but please do not in any way feel obligated to give a gift. Your
+          presence at our wedding is what we would like most!
         </Answer>
 
         <Question>Are kids welcome?</Question>
         <Answer>
-          Yes, we’ll have some games and activities at the reception for the
-          kids - and for the young-at-heart if you want to join in! ;)
+          Absolutely! We love kids and would be thrilled to have them at the
+          wedding.
         </Answer>
 
         <Question>
-          Is it okay to take pictures with our phones and cameras during the
-          wedding?
+          Is it okay to take pictures during the ceremony or reception?
         </Question>
         <Answer>
-          Yes! We would love for you to take photos and share them with us if
-          you want!
-        </Answer>
-
-        <Question>Who should I contact with questions?</Question>
-        <Answer>
-          Please reach out to maid-of-honor, Sarah TODO, if you have any
-          additional questions!
+          Most definitely, and if you take some nice photos we’d love to see
+          them, so feel free to tag us on social media!
         </Answer>
       </Prose>
     </PageSection>
