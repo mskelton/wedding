@@ -28,10 +28,12 @@ export function PageSectionSeparator() {
 export function PageSectionImage({
   alt,
   animate,
+  className,
   src,
 }: {
   alt: string
   animate?: boolean
+  className?: string
   src: string
 }) {
   return (
@@ -42,6 +44,7 @@ export function PageSectionImage({
           "absolute size-full object-cover",
           animate &&
             "animate-[1ms_pop_linear] [animation-range:0_60%] [animation-timeline:view()]",
+          className,
         )}
         decoding="async"
         src={src}

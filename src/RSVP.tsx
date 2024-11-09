@@ -63,7 +63,7 @@ function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
   return (
     <form className="mx-auto w-full max-w-lg" onSubmit={handleSubmit}>
       <div className="space-y-6 font-sans">
-        <TextField autoComplete="name" autoFocus isRequired name="name">
+        <TextField autoComplete="name" isRequired name="name">
           <Label>Your name</Label>
           <Input data-1p-ignore />
           <FieldError>

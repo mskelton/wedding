@@ -4,22 +4,22 @@ const images = [
   {
     alt: "TODO",
     className: "row-span-4 col-span-2",
-    src: "/images/hero.jpg",
+    src: "/images/formal.jpg",
   },
   {
     alt: "TODO",
     className: "row-span-4 col-span-2",
-    src: "/images/hero.jpg",
+    src: "/images/footer.jpg",
   },
   {
     alt: "TODO",
     className: "row-span-6 col-span-3",
-    src: "/images/hero.jpg",
+    src: "/images/mountain.jpg",
   },
   {
     alt: "TODO",
     className: "row-span-12 col-span-5",
-    src: "/images/hero.jpg",
+    src: "/images/trees.jpg",
   },
   {
     alt: "TODO",
@@ -35,13 +35,16 @@ const images = [
 
 export function Gallery() {
   return (
-    <div className="grid grid-cols-12 grid-rows-12 gap-3" id="gallery">
-      {images.map((image) => (
+    <div
+      className="grid grid-cols-12 grid-rows-[repeat(12,40px)] gap-3"
+      id="gallery"
+    >
+      {images.map((image, i) => (
         <ZoomableImage
-          key={image.src}
+          key={i}
           {...image}
           className={image.className}
-          imageClassName="size-full"
+          imageClassName="size-full object-cover"
         />
       ))}
     </div>

@@ -19,7 +19,11 @@ export function DateVenue() {
   return (
     <PageSection className="text-center" id="date-venue">
       <PageSectionFullWidth>
-        <PageSectionImage alt="TODO" src="/images/our-story.jpg" />
+        <PageSectionImage
+          alt="TODO"
+          className="object-[center_40%]"
+          src="/images/mountain.jpg"
+        />
       </PageSectionFullWidth>
 
       <div className="isolate mx-auto -mt-28 w-[1000px] max-w-[80vw] bg-white p-20 dark:bg-zinc-950">
