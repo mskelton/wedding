@@ -1,4 +1,5 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import { flushSync } from "react-dom"
 import { Button } from "./components/Button"
 import { Confetti, ConfettiInstance, ConfettiRef } from "./components/Confetti"
 import { FieldError } from "./components/FieldError"
@@ -14,12 +15,16 @@ import {
 import { TextArea } from "./components/TextArea"
 import { TextField } from "./components/TextField"
 import { db } from "./utils/db"
+import { startViewTransition } from "./utils/startViewTransition"
 
 export function RSVP() {
+  const [isError, setIsError] = useState(false)
   const confettiRef = useRef<ConfettiRef | null>(null)
   const confetti = confettiRef.current?.confetti
 
   async function handleSubmit(formData: FormData) {
+    setIsError(false)
+
     const { error } = await db.from("attendees").insert({
       additional_attendees: parseInt(
         formData.get("additional_attendees") as string,
@@ -29,12 +34,17 @@ export function RSVP() {
     })
 
     if (error) {
-      // TODO: Toast
-      console.log("error", error)
-    } else {
-      fireConfetti(confetti)
-      close()
+      startViewTransition(() => {
+        flushSync(() => {
+          setIsError(true)
+        })
+      })
+
+      console.error(error)
+      return
     }
+
+    fireConfetti(confetti)
   }
 
   return (
@@ -46,7 +56,7 @@ export function RSVP() {
         </PageSectionSubtitle>
         <PageSectionSeparator />
 
-        <RSVPForm onSubmit={handleSubmit} />
+        <RSVPForm isError={isError} onSubmit={handleSubmit} />
       </PageSection>
 
       <Confetti ref={confettiRef} className="z-50" />
@@ -54,7 +64,13 @@ export function RSVP() {
   )
 }
 
-function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
+function RSVPForm({
+  isError,
+  onSubmit,
+}: {
+  isError: boolean
+  onSubmit: (data: FormData) => void
+}) {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
     onSubmit(new FormData(event.currentTarget))
@@ -62,6 +78,20 @@ function RSVPForm({ onSubmit }: { onSubmit: (data: FormData) => void }) {
 
   return (
     <form className="mx-auto w-full max-w-lg" onSubmit={handleSubmit}>
+      {isError ? (
+        <div className="mb-8 border border-red-600 px-4 py-3">
+          <p className="mb-2 text-lg font-semibold text-red-600">
+            Uh oh, we messed up
+          </p>
+
+          <p className="font-sans text-sm font-light text-zinc-400">
+            Something didn’t work when we tried submitting your RVSP. You can
+            blame Mark, he’s the one that decided it would be a good idea to
+            build a custom wedding website.
+          </p>
+        </div>
+      ) : null}
+
       <div className="space-y-6 font-sans">
         <TextField autoComplete="name" isRequired name="name">
           <Label>Your name</Label>
