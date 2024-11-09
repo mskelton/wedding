@@ -13,7 +13,7 @@ export function Footer() {
         View source on{" "}
         <a
           className="text-blue-500 hover:underline"
-          href="https://github.com/mskelton/wedding"
+          href="https://github.com/mskelton/skelton.wedding"
           rel="noreferrer"
           target="_blank"
         >

@@ -17,13 +17,14 @@ import { TextField } from "./components/TextField"
 import { db } from "./utils/db"
 import { startViewTransition } from "./utils/startViewTransition"
 
+type FormStatus = "error" | "idle" | "submitting" | "success"
+
 export function RSVP() {
-  const [isError, setIsError] = useState(false)
   const confettiRef = useRef<ConfettiRef | null>(null)
-  const confetti = confettiRef.current?.confetti
+  const [status, setStatus] = useState<FormStatus>("idle")
 
   async function handleSubmit(formData: FormData) {
-    setIsError(false)
+    setStatus("submitting")
 
     const { error } = await db.from("attendees").insert({
       additional_attendees: parseInt(
@@ -35,16 +36,18 @@ export function RSVP() {
 
     if (error) {
       startViewTransition(() => {
-        flushSync(() => {
-          setIsError(true)
-        })
+        flushSync(() => setStatus("error"))
       })
 
       console.error(error)
       return
     }
 
-    fireConfetti(confetti)
+    startViewTransition(() => {
+      flushSync(() => setStatus("success"))
+    })
+
+    fireConfetti(confettiRef.current?.confetti)
   }
 
   return (
@@ -56,7 +59,7 @@ export function RSVP() {
         </PageSectionSubtitle>
         <PageSectionSeparator />
 
-        <RSVPForm isError={isError} onSubmit={handleSubmit} />
+        <RSVPForm onSubmit={handleSubmit} status={status} />
       </PageSection>
 
       <Confetti ref={confettiRef} className="z-50" />
@@ -65,11 +68,11 @@ export function RSVP() {
 }
 
 function RSVPForm({
-  isError,
   onSubmit,
+  status,
 }: {
-  isError: boolean
   onSubmit: (data: FormData) => void
+  status: FormStatus
 }) {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -78,7 +81,7 @@ function RSVPForm({
 
   return (
     <form className="mx-auto w-full max-w-lg" onSubmit={handleSubmit}>
-      {isError ? (
+      {status === "error" ? (
         <div className="mb-8 border border-red-600 px-4 py-3">
           <p className="mb-2 text-lg font-semibold text-red-600">
             Uh oh, we messed up
@@ -88,6 +91,20 @@ function RSVPForm({
             Something didn’t work when we tried submitting your RVSP. You can
             blame Mark, he’s the one that decided it would be a good idea to
             build a custom wedding website.
+          </p>
+        </div>
+      ) : null}
+
+      {status === "success" ? (
+        <div className="mb-8 border border-green-600 px-4 py-3">
+          <p className="mb-2 text-lg font-semibold text-green-600">
+            We can’t wait to see you there!
+          </p>
+
+          <p className="font-sans text-sm font-light text-zinc-400">
+            We’ve received your RSVP and can’t wait to see you there! If you
+            have any more questions or need to make any changes, feel free to
+            give us a shout!
           </p>
         </div>
       ) : null}
