@@ -2,14 +2,16 @@ import clsx from "clsx"
 import { styled } from "../utils/styled"
 
 export const PageSection = styled.section(
-  "my-20 md:my-40 scroll-mt-32 px-8 dark:text-white",
+  "my-20 md:my-40 scroll-mt-32 px-4 sm:px-8 dark:text-white",
 )
 
-export const PageSectionFullWidth = styled.div("-mx-8")
+export const PageSectionFullWidth = styled.div("-mx-4 sm:-mx-8")
 
-export const PageSectionTitle = styled.h2("mb-6 md:mb-12 text-center text-6xl")
+export const PageSectionTitle = styled.h2(
+  "mb-6 md:mb-12 text-center text-4xl md:text-6xl",
+)
 export const PageSectionSubtitle = styled.p(
-  "-mt-4 md:-mt-8 mb-6 text-center text-2xl text-zinc-500",
+  "-mt-4 md:-mt-8 mb-6 text-center text-xl md:text-2xl text-zinc-500",
 )
 
 export function PageSectionSeparator() {

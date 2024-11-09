@@ -26,7 +26,7 @@ export function DateVenue() {
         />
       </PageSectionFullWidth>
 
-      <div className="isolate mx-auto -mt-28 w-[1000px] max-w-[80vw] bg-white p-20 dark:bg-zinc-950">
+      <div className="isolate mx-auto w-[1000px] max-w-full bg-white dark:bg-zinc-950 md:-mt-28 md:max-w-[80vw] md:p-20">
         <PageSectionTitle className="mb-4">
           {dates.wedding.toLocaleDateString(undefined, {
             day: "numeric",

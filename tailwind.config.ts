@@ -50,6 +50,9 @@ const config: Config = {
           },
         },
       }),
+      screens: {
+        xs: "420px",
+      },
       typography: (theme: any) => ({
         dark: {
           css: {
