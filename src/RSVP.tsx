@@ -87,7 +87,7 @@ function RSVPForm({
             Uh oh, we messed up
           </p>
 
-          <p className="font-sans text-sm font-light text-zinc-400">
+          <p className="font-sans text-sm font-light text-zinc-600 dark:text-zinc-400">
             Something didn’t work when we tried submitting your RVSP. You can
             blame Mark, he’s the one that decided it would be a good idea to
             build a custom wedding website.
@@ -101,7 +101,7 @@ function RSVPForm({
             We can’t wait to see you there!
           </p>
 
-          <p className="font-sans text-sm font-light text-zinc-400">
+          <p className="font-sans text-sm font-light text-zinc-600 dark:text-zinc-400">
             We’ve received your RSVP and can’t wait to see you there! If you
             have any more questions or need to make any changes, feel free to
             give us a shout!
