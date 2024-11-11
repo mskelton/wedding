@@ -5,7 +5,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef } from "react"
 export type ConfettiInstance = CreateTypes
 
 export type ConfettiRef = {
-  confetti: ConfettiInstance | undefined
+  getConfetti: () => ConfettiInstance | undefined
 }
 
 export type ConfettiProps = {
@@ -32,7 +32,11 @@ export const Confetti = forwardRef<ConfettiRef, ConfettiProps>(
       }
     }, [])
 
-    useImperativeHandle(ref, () => ({ confetti: confetti.current }), [])
+    useImperativeHandle(
+      ref,
+      () => ({ getConfetti: () => confetti.current }),
+      [],
+    )
 
     return (
       <canvas

@@ -43,11 +43,8 @@ export function RSVP() {
       return
     }
 
-    startViewTransition(() => {
-      flushSync(() => setStatus("success"))
-    })
-
-    fireConfetti(confettiRef.current?.confetti)
+    fireConfetti(confettiRef.current?.getConfetti())
+    setStatus("success")
   }
 
   return (
