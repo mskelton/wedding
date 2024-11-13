@@ -54,6 +54,7 @@ export function DateVenue() {
               {dates.wedding.toLocaleTimeString(undefined, {
                 hour: "numeric",
                 minute: "numeric",
+                timeZone: "America/Chicago",
               })}
             </Time>
             <Text>Monroe Bible Church</Text>
@@ -72,6 +73,7 @@ export function DateVenue() {
               {dates.reception.toLocaleTimeString(undefined, {
                 hour: "numeric",
                 minute: "numeric",
+                timeZone: "America/Chicago",
               })}
             </Time>
             <Text>Monroe Bible Church</Text>
