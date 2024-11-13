@@ -32,12 +32,12 @@ export function FAQs() {
         <Question>Do you have a registry?</Question>
         <Answer>
           We are registered at{" "}
-          <a href="https://www.myregistry.com/wedding-registry/mark-skelton-and-rianna-caswell-monroe-wi/4523077">
-            Bed Bath &amp; Beyond
-          </a>{" "}
-          and{" "}
           <a href="https://www.amazon.com/wedding/share/skelton-caswell">
             Amazon
+          </a>{" "}
+          and{" "}
+          <a href="https://www.myregistry.com/wedding-registry/mark-skelton-and-rianna-caswell-monroe-wi/4523077">
+            Bed Bath &amp; Beyond
           </a>
           , but please do not in any way feel obligated to give a gift. Your
           presence at our wedding is what we would like most!
