@@ -21,18 +21,6 @@
   unicode-range: U+0000-00FF;
 }
 
-:root.pause-transitions *,
-:root.pause-transitions *::before,
-:root.pause-transitions *::after {
-  transition: none !important;
-}
-
 :root {
-  --header-bg: theme("colors.white / 0.75");
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --header-bg: theme("colors.zinc.900 / 0.75");
-  }
+  --header-bg: theme("colors.zinc.900 / 0.75");
 }
