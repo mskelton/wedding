@@ -18,12 +18,13 @@ export default function ZoomableImage({
   src,
   ...props
 }: ZoomableImageProps) {
-  const margin = useMediaQuery("(min-width: 640px)") ? 48 : 0
+  const isMedium = useMediaQuery("(min-width: 768px)")
 
   return (
     <MediumImage
       className={clsx("sm:max-w-[calc(100%+4rem)]", className)}
-      margin={margin}
+      isEnabled={isMedium}
+      margin={48}
     >
       <img alt={alt ?? ""} className={imageClassName} src={src} {...props} />
     </MediumImage>

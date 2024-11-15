@@ -4,10 +4,12 @@ import { cloneElement, useEffect, useRef, useState } from "react"
 export default function MediumImage({
   children,
   className,
+  isEnabled = true,
   margin = 24,
 }: {
   children: React.ReactElement
   className: string | null
+  isEnabled: boolean
   margin: number
 }) {
   const containerRef = useRef<HTMLDivElement | null>(null)
@@ -19,7 +21,7 @@ export default function MediumImage({
   useEffect(() => {
     const image = ref.current
     const container = containerRef.current
-    if (!image || !container) return
+    if (!image || !container || !isEnabled) return
 
     const controller = new AbortController()
     const { signal } = controller
@@ -109,13 +111,16 @@ export default function MediumImage({
     }
 
     return () => controller.abort()
-  }, [isOpen, margin])
+  }, [isEnabled, isOpen, margin])
 
   return (
     <span
       ref={containerRef}
       className={clsx("rmi", isOpen ? "open" : "closed", className)}
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => {
+        if (!isEnabled) return
+        setIsOpen(!isOpen)
+      }}
     >
       <span className="rmi-overlay" />
 
