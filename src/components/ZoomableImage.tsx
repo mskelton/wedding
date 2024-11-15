@@ -1,8 +1,8 @@
 import "./ZoomableImage.css"
 import "react-medium-image/styles.css"
-import { ArrowsPointingOutIcon } from "@heroicons/react/20/solid"
 import clsx from "clsx"
-import MediumImage from "react-medium-image"
+import { useMediaQuery } from "../utils/useMediaQuery"
+import MediumImage from "./MediumImage"
 
 export interface ZoomableImageProps {
   alt?: string
@@ -18,11 +18,12 @@ export default function ZoomableImage({
   src,
   ...props
 }: ZoomableImageProps) {
+  const margin = useMediaQuery("(min-width: 640px)") ? 48 : 0
+
   return (
     <MediumImage
       className={clsx("sm:max-w-[calc(100%+4rem)]", className)}
-      margin={48}
-      zoomIcon={<ArrowsPointingOutIcon />}
+      margin={margin}
     >
       <img alt={alt ?? ""} className={imageClassName} src={src} {...props} />
     </MediumImage>
