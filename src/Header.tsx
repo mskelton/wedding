@@ -37,7 +37,7 @@ export function Header() {
         <ul className="flex items-center gap-4 text-xl">
           <Item href="#our-story">Our Story</Item>
           <Item href="#date-venue">Date &amp; Venue</Item>
-          <Item href="#gallery">Gallery</Item>
+          <Item href="#rsvp">RSVP</Item>
           <Item href="#faqs">FAQs</Item>
         </ul>
       </nav>

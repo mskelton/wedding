@@ -27,13 +27,7 @@ export function DateVenue() {
       </PageSectionFullWidth>
 
       <div className="isolate mx-auto w-[1000px] max-w-full bg-white dark:bg-zinc-950 md:-mt-28 md:max-w-[80vw] md:p-20">
-        <PageSectionTitle className="mb-4">
-          {dates.wedding.toLocaleDateString(undefined, {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}
-        </PageSectionTitle>
+        <PageSectionTitle className="mb-4">March 1st, 2025</PageSectionTitle>
 
         <div className="relative mb-16 w-full">
           <div className="absolute top-[calc(50%-1px)] flex w-full justify-center">
@@ -57,10 +51,10 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <Text>Monroe Bible Church</Text>
-            <Location>Monroe, Wisconsin</Location>
+            <Text>Park Hills Evangelical Free Church</Text>
+            <Location>Freeport, Illinois</Location>
             <Button
-              href="https://maps.app.goo.gl/RucPEE5TDz4acEUN7"
+              href="https://maps.app.goo.gl/mpJg79YCtaESqYTTA"
               target="_blank"
             >
               View Map
@@ -76,10 +70,10 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <Text>Monroe Bible Church</Text>
-            <Location>Monroe, Wisconsin</Location>
+            <Text>The Field House</Text>
+            <Location>Stockton, Illinois</Location>
             <Button
-              href="https://maps.app.goo.gl/RucPEE5TDz4acEUN7"
+              href="https://maps.app.goo.gl/erkLD8hTQ3iAj2PTA"
               target="_blank"
             >
               View Map
