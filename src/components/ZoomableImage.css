@@ -2,12 +2,10 @@
   cursor: pointer !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .rmi-overlay {
-    background-color: rgba(0 0 0 / 0);
-  }
+.rmi-overlay {
+  background-color: rgba(0 0 0 / 0);
+}
 
-  .rmi.open .rmi-overlay {
-    background-color: rgba(0 0 0 / 0.8);
-  }
+.rmi.open .rmi-overlay {
+  background-color: rgba(0 0 0 / 0.8);
 }
