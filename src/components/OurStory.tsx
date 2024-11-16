@@ -21,9 +21,9 @@ export function OurStory() {
           just friends.” This might sound like a joke, but it is something that
           Rianna actually said. For nearly 10 years, we remained just friends.
           Sure we got along well, enjoyed chatting and playing disc golf, but
-          there was never a thought of anything more. However, thanks to
-          Rianna’s persistent family suggesting that we should consider dating,
-          the unthinkable happened, and we started dating.
+          there was never a thought of anything more. However, thanks to the
+          persistence of Rianna’s family suggesting that we date, the
+          unthinkable happened.
         </p>
 
         <p>
@@ -33,7 +33,7 @@ export function OurStory() {
           all the information he needed, we got in our cars and went home. Turns
           out that’s not the most effective strategy to win a girl’s heart.
           Thankfully, Rianna wasn’t scared off by a little awkwardness in our
-          first few dates, and we continued to date.
+          first few dates, and so our relationship continued.
         </p>
 
         <p>
@@ -44,8 +44,8 @@ export function OurStory() {
           right to continue dating, but through it all we have seen God’s hand
           working in our lives individually and together to help us in making
           our decision to marry. We know that if we keep our focus fixed on
-          Jesus and seek to love Him first love each other more than ourselves,
-          our future together will be bright!
+          Jesus, seek to love Him first, and love each other more than
+          ourselves, our future together will be bright!
         </p>
       </Prose>
     </PageSection>
