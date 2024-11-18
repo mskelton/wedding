@@ -2,7 +2,7 @@ import clsx from "clsx"
 import { styled } from "../utils/styled"
 
 export const PageSection = styled.section(
-  "my-20 md:my-40 scroll-mt-32 px-4 sm:px-8 dark:text-white",
+  "my-32 md:my-48 scroll-mt-32 px-4 sm:px-8 dark:text-white",
 )
 
 export const PageSectionFullWidth = styled.div("-mx-4 sm:-mx-8")
