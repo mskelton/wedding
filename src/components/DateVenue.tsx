@@ -1,4 +1,5 @@
 import { dates } from "../utils/date"
+import { formatStylizedDate } from "../utils/formatStylizedDate"
 import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import {
@@ -27,7 +28,9 @@ export function DateVenue() {
       </PageSectionFullWidth>
 
       <div className="isolate mx-auto w-[1000px] max-w-full bg-white dark:bg-zinc-950 md:-mt-28 md:max-w-[80vw] md:p-20">
-        <PageSectionTitle className="mb-4">March 1st, 2025</PageSectionTitle>
+        <PageSectionTitle className="mb-4">
+          {formatStylizedDate(dates.wedding)}
+        </PageSectionTitle>
 
         <div className="relative mb-16 w-full">
           <div className="absolute top-[calc(50%-1px)] flex w-full justify-center">
@@ -36,7 +39,7 @@ export function DateVenue() {
 
           <div className="isolate flex items-center justify-center">
             <p className="bg-white px-4 text-2xl text-zinc-400 dark:bg-zinc-950 dark:text-zinc-600">
-              {dates.wedding.toLocaleDateString(undefined, { weekday: "long" })}
+              {dates.wedding.toLocaleDateString("en-US", { weekday: "long" })}
             </p>
           </div>
         </div>
@@ -45,7 +48,7 @@ export function DateVenue() {
           <div>
             <Subheader>Ceremony</Subheader>
             <Time>
-              {dates.wedding.toLocaleTimeString(undefined, {
+              {dates.wedding.toLocaleTimeString("en-US", {
                 hour: "numeric",
                 minute: "numeric",
                 timeZone: "America/Chicago",
@@ -64,7 +67,7 @@ export function DateVenue() {
           <div>
             <Subheader>Reception</Subheader>
             <Time>
-              {dates.reception.toLocaleTimeString(undefined, {
+              {dates.reception.toLocaleTimeString("en-US", {
                 hour: "numeric",
                 minute: "numeric",
                 timeZone: "America/Chicago",
