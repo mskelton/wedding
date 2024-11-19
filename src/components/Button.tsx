@@ -122,10 +122,7 @@ export function Button({
       {isLoading ? (
         <span className="absolute inset-0 z-30 flex items-center justify-center">
           <ArrowPathIcon
-            className={clsx(
-              iconSize,
-              "text-black [animation:spin_1.5s_linear_infinite]",
-            )}
+            className={clsx(iconSize, "animate-spin text-black")}
           />
         </span>
       ) : null}
