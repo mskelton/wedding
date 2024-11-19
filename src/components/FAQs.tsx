@@ -52,6 +52,14 @@ export function FAQs() {
           Most definitely, and if you take some nice photos we’d love to see
           them, so feel free to tag us on social media!
         </Answer>
+
+        <Question>Who can I contact with any questions?</Question>
+        <Answer>
+          Feel free to reach out to Mark with any questions you have prior to
+          the wedding. You can reach him via email at{" "}
+          <a href="mailto:mdskelton99@gmail.com">mdskelton99@gmail.com</a> or
+          phone at <a href="tel:+16088971196">(608) 897-1196</a>.
+        </Answer>
       </Prose>
     </PageSection>
   )
