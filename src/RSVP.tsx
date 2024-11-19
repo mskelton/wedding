@@ -133,7 +133,12 @@ function RSVPForm({
           <TextArea className="resize-none" rows={3} />
         </TextField>
 
-        <Button className="w-full" size="lg" type="submit">
+        <Button
+          className="w-full"
+          isLoading={status === "submitting"}
+          size="lg"
+          type={status === "submitting" ? "button" : "submit"}
+        >
           Submit
         </Button>
       </div>

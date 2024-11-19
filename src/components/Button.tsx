@@ -1,3 +1,5 @@
+import { ArrowPathIcon } from "@heroicons/react/20/solid"
+import clsx from "clsx"
 import { cloneElement, HTMLAttributeAnchorTarget } from "react"
 import { twMerge } from "tailwind-merge"
 
@@ -20,6 +22,8 @@ export type ButtonProps = {
   iconEnd?: React.ReactElement
   /** The icon to place at the start of the button. */
   iconStart?: React.ReactElement
+  /** When true, displays a loading state. */
+  isLoading?: boolean
   /** Handler that is called when the press is released over the target. */
   onPress?: () => void
   /**
@@ -53,6 +57,7 @@ export function Button({
   href,
   iconEnd,
   iconStart,
+  isLoading,
   onPress,
   size = "md",
   target,
@@ -99,6 +104,8 @@ export function Button({
         size === "md" && "px-3 py-1 text-base",
         size === "lg" && "px-4 py-2 text-lg",
         size === "xl" && "px-6 py-3 text-3xl",
+        // Loading
+        isLoading && "before:z-30 before:h-full before:bg-white",
         className,
       )}
       href={href!}
@@ -111,6 +118,17 @@ export function Button({
         {children}
         {iconEnd ? cloneElement(iconEnd, { className: iconSize }) : null}
       </span>
+
+      {isLoading ? (
+        <span className="absolute inset-0 z-30 flex items-center justify-center">
+          <ArrowPathIcon
+            className={clsx(
+              iconSize,
+              "text-black [animation:spin_1.5s_linear_infinite]",
+            )}
+          />
+        </span>
+      ) : null}
     </Component>
   )
 }
