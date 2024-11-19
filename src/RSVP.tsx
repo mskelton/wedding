@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import { flushSync } from "react-dom"
 import { Button } from "./components/Button"
+import { Checkbox } from "./components/Checkbox"
 import { Confetti, ConfettiInstance, ConfettiRef } from "./components/Confetti"
 import { FieldError } from "./components/FieldError"
 import { Input } from "./components/Input"
@@ -32,6 +33,7 @@ export function RSVP() {
       ),
       name: formData.get("name") as string,
       notes: formData.get("notes") as string,
+      reception: formData.get("reception") === "on",
     })
 
     if (error) {
@@ -123,6 +125,8 @@ function RSVPForm({
           <Label>Additional guests</Label>
           <Input />
         </NumberField>
+
+        <Checkbox name="reception">Attending reception?</Checkbox>
 
         <TextField name="notes">
           <Label>Notes</Label>

@@ -67,6 +67,8 @@ export function Button({
       className={twMerge(
         // Isolation is required or it will have a subtle blend with the background
         "relative isolate inline-block bg-transparent text-center",
+        // Focus outline
+        "focus:outline-none focus-visible:ring-1 focus-visible:ring-black focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:focus-visible:ring-white dark:focus-visible:ring-offset-zinc-950",
         // Text has to be white so that when we apply the filter, it inverts to
         // black. Without an explicit text color, the filter will not have
         // anything to invert and it will result in white text on white background.
