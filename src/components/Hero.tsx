@@ -16,7 +16,7 @@ export function Hero() {
           <img
             alt="A photo of the couple"
             className="size-full object-cover"
-            src="/images/hero.jpg"
+            src="/images/engaged-7.jpg"
           />
         </picture>
       </div>

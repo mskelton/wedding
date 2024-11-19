@@ -23,7 +23,7 @@ export function DateVenue() {
         <PageSectionImage
           alt="TODO"
           className="object-[center_40%]"
-          src="/images/mountain.jpg"
+          src="/images/hero.jpg"
         />
       </PageSectionFullWidth>
 
