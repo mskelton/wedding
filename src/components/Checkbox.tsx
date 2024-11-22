@@ -1,16 +1,18 @@
 import clsx from "clsx"
-import { Checkbox as AriaCheckbox } from "react-aria-components"
+import {
+  Checkbox as AriaCheckbox,
+  CheckboxProps as AriaCheckboxProps,
+} from "react-aria-components"
 
-export type CheckboxProps = {
+export type CheckboxProps = AriaCheckboxProps & {
   children: React.ReactNode
-  name: string
 }
 
-export function Checkbox({ children, name }: CheckboxProps) {
+export function Checkbox({ children, ...props }: CheckboxProps) {
   return (
     <AriaCheckbox
       className="flex items-center gap-2 text-sm text-zinc-800 forced-color-adjust-none dark:text-zinc-300"
-      name={name}
+      {...props}
     >
       {({ isFocusVisible, isSelected }) => (
         <>

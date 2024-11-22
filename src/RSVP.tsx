@@ -126,7 +126,9 @@ function RSVPForm({
           <Input />
         </NumberField>
 
-        <Checkbox name="reception">Attending reception?</Checkbox>
+        <Checkbox defaultSelected name="reception">
+          Attending reception?
+        </Checkbox>
 
         <TextField name="notes">
           <Label>Notes</Label>
