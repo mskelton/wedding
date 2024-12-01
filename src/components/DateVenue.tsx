@@ -4,7 +4,7 @@ import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import { PageSection, PageSectionTitle } from "./Section"
 
-const Text = styled.p("text-lg")
+const LocationName = styled.p("text-lg mb-1")
 const Location = styled.p(
   "text-md mb-8 font-light text-gray-400 dark:text-gray-400",
 )
@@ -41,10 +41,14 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <Text>Park Hills Church</Text>
-            <Location>Freeport, Illinois</Location>
+            <LocationName>Zion Church</LocationName>
+            <Location>
+              4292 W Stephenson St Rd
+              <br />
+              Freeport, Illinois
+            </Location>
             <Button
-              href="https://maps.app.goo.gl/mpJg79YCtaESqYTTA"
+              href="https://maps.app.goo.gl/Uz1FVJUrJuaEDNmKA"
               target="_blank"
             >
               View Map
@@ -60,8 +64,12 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <Text>The Field House</Text>
-            <Location>Stockton, Illinois</Location>
+            <LocationName>The Field House</LocationName>
+            <Location>
+              8775 S Town Hall Rd
+              <br />
+              Stockton, Illinois
+            </Location>
             <Button
               href="https://maps.app.goo.gl/erkLD8hTQ3iAj2PTA"
               target="_blank"
