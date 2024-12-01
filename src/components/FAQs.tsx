@@ -1,3 +1,4 @@
+import { dates } from "../utils/date"
 import { styled } from "../utils/styled"
 import { Prose } from "./Prose"
 import { PageSection, PageSectionTitle } from "./Section"
@@ -12,7 +13,12 @@ export function FAQs() {
 
       <Prose>
         <Question>Is the wedding indoors or outdoors?</Question>
-        <Answer>Both the ceremony and reception will be indoors.</Answer>
+        <Answer>
+          Both the ceremony and reception will be indoors. The reception will
+          have some outdoor space to walk around, if you are feeling adventurous
+          in early{" "}
+          {dates.wedding.toLocaleDateString("en-US", { month: "long" })}!
+        </Answer>
 
         <Question>What should I wear?</Question>
         <Answer>
@@ -23,10 +29,15 @@ export function FAQs() {
 
         <Question>What time will the reception end?</Question>
         <Answer>
-          The bride and groom will be leaving the reception around 5:30 PM, but
-          you are more than welcome to stay as long as you would like! Just be
-          careful not to stay too late or you might get roped into helping the
-          cleanup crew!
+          The bride and groom will be leaving the reception around{" "}
+          {dates.receptionEnd.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            timeZone: "America/Chicago",
+          })}
+          , but you are more than welcome to stay as long as you would like!
+          Just be careful not to stay too late or you might get roped into
+          helping the cleanup crew!
         </Answer>
 
         <Question>Do you have a registry?</Question>
@@ -42,7 +53,8 @@ export function FAQs() {
         <Question>Are kids welcome?</Question>
         <Answer>
           Absolutely! We love kids and would be thrilled to have them at the
-          wedding.
+          wedding! Just make sure that you leave with the same number of kids
+          you brought 😜.
         </Answer>
 
         <Question>
