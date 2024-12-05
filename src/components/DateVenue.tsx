@@ -41,14 +41,14 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <LocationName>Zion Church</LocationName>
+            <LocationName>Park Hills Church</LocationName>
             <Location>
-              4292 W Stephenson St Rd
+              2525 W Stephenson St
               <br />
               Freeport, Illinois
             </Location>
             <Button
-              href="https://maps.app.goo.gl/Uz1FVJUrJuaEDNmKA"
+              href="https://maps.app.goo.gl/TPhkLNjw3MmwZuRF6"
               target="_blank"
             >
               View Map
