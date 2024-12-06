@@ -15,7 +15,7 @@ export function OurStory() {
         <PageSectionImage
           alt="TODO"
           className="object-[center_40%]"
-          src="/images/hero.jpg"
+          src="/images/hero-5.jpg"
         />
       </PageSectionFullWidth>
 

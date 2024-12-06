@@ -9,20 +9,20 @@ const Header = styled.h1(
 export function Hero() {
   return (
     <section className="dark relative h-full">
-      <div className="after:absolute after:inset-0 after:bg-gradient-to-b after:from-black/20 after:to-black/60">
+      <div className="after:absolute after:inset-0 after:bg-gradient-to-b after:from-black/30 after:to-black/60">
         <picture>
-          <source media="(max-width: 767px)" srcSet="/images/proposal.jpg" />
+          <source media="(max-width: 767px)" srcSet="/images/hero-mobile.jpg" />
 
           <img
             alt="A photo of the couple"
             className="size-full object-cover"
-            src="/images/engaged-7.jpg"
+            src="/images/hero.jpg"
           />
         </picture>
       </div>
 
       <div className="text-center text-white">
-        <Header className="absolute left-0 right-0 top-40 md:hidden">
+        <Header className="absolute left-0 right-0 top-20 md:hidden">
           Mark &amp; Rianna
         </Header>
 

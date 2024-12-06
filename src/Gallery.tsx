@@ -33,6 +33,21 @@ const images = [
     className: "lg:row-span-6 lg:col-span-3",
     src: "/images/hero.jpg",
   },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/trees.jpg",
+  },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/hero.jpg",
+  },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/hero.jpg",
+  },
 ]
 
 export function Gallery() {
