@@ -6,48 +6,48 @@ const images = [
     alt: "TODO",
     className: "lg:row-span-4 lg:col-span-2",
     imageClassName: "object-[center_20%]",
-    src: "/images/formal.jpg",
+    src: "/images/hero-2.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-4 lg:col-span-2",
-    src: "/images/footer.jpg",
+    src: "/images/hero-3.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-6 lg:col-span-3",
-    src: "/images/mountain.jpg",
+    src: "/images/hero-4.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-12 lg:col-span-5",
-    src: "/images/trees.jpg",
+    src: "/images/hero-5.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-8 lg:col-span-4",
-    src: "/images/hero.jpg",
+    src: "/images/hero-8.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-6 lg:col-span-3",
-    src: "/images/hero.jpg",
+    src: "/images/hero-9.jpg",
   },
-  {
-    alt: "TODO",
-    className: "lg:row-span-4 lg:col-span-4",
-    src: "/images/trees.jpg",
-  },
-  {
-    alt: "TODO",
-    className: "lg:row-span-4 lg:col-span-4",
-    src: "/images/hero.jpg",
-  },
-  {
-    alt: "TODO",
-    className: "lg:row-span-4 lg:col-span-4",
-    src: "/images/hero.jpg",
-  },
+  // {
+  //   alt: "TODO",
+  //   className: "lg:row-span-4 lg:col-span-4",
+  //   src: "/images/hero-8.jpg",
+  // },
+  // {
+  //   alt: "TODO",
+  //   className: "lg:row-span-4 lg:col-span-4",
+  //   src: "/images/hero-9.jpg",
+  // },
+  // {
+  //   alt: "TODO",
+  //   className: "lg:row-span-4 lg:col-span-4",
+  //   src: "/images/hero-10.jpg",
+  // },
 ]
 
 export function Gallery() {
