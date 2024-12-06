@@ -19,7 +19,7 @@ export function OurStory() {
         />
       </PageSectionFullWidth>
 
-      <div className="isolate mx-auto w-[1000px] max-w-full bg-white dark:bg-zinc-950 md:-mt-28 md:max-w-[80vw] md:p-20">
+      <div className="isolate mx-auto w-[1000px] max-w-full bg-white dark:bg-zinc-950 md:-mt-40 md:max-w-[80vw] md:p-20">
         <PageSectionTitle>Our Story</PageSectionTitle>
         <PageSectionSubtitle className="italic">
           Impossible made possible
