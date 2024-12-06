@@ -3,10 +3,10 @@ import { dates } from "../utils/date"
 
 function Item({ label, value }: { label: string; value: number }) {
   return (
-    <span className="flex gap-0.5">
+    <span className="flex gap-0.5 text-xl">
       <span suppressHydrationWarning>{value}</span>
 
-      <span aria-label={label} className="text-zinc-400">
+      <span aria-label={label} className="mt-px text-zinc-400">
         {label[0]}
       </span>
     </span>
@@ -37,7 +37,7 @@ export function WeddingDateCounter() {
   }, [])
 
   return (
-    <p className="flex justify-center gap-2 text-lg">
+    <p className="flex justify-center gap-3">
       <Item label="Days" value={days} />
       <Item label="Hours" value={hours} />
       <Item label="Minutes" value={minutes} />

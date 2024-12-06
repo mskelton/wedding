@@ -26,7 +26,7 @@ export function OurStory() {
         </PageSectionSubtitle>
         <PageSectionSeparator />
 
-        <Prose className="text-justify">
+        <Prose className="text-justify prose-p:text-lg prose-p:leading-loose">
           <p>
             “The great thing about our friendship is it will never be more than
             just friends.” This might sound like a joke, but it is something

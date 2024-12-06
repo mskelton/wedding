@@ -4,12 +4,12 @@ import { styled } from "../utils/styled"
 import { Button } from "./Button"
 import { PageSection, PageSectionTitle } from "./Section"
 
-const LocationName = styled.p("text-lg mb-1")
+const Subheader = styled.p("mb-2 text-4xl")
+const Time = styled.p("mb-12 text-2xl text-gray-500 dark:text-gray-400")
+const LocationName = styled.p("text-xl mb-2")
 const Location = styled.p(
-  "text-md mb-8 font-light text-gray-400 dark:text-gray-400",
+  "text-lg mb-12 font-light text-gray-400 dark:text-gray-400",
 )
-const Subheader = styled.p("mb-2 text-3xl")
-const Time = styled.p("mb-8 text-xl text-gray-500 dark:text-gray-400")
 
 export function DateVenue() {
   return (
@@ -25,7 +25,7 @@ export function DateVenue() {
           </div>
 
           <div className="isolate flex items-center justify-center">
-            <p className="bg-white px-4 text-2xl text-zinc-400 dark:bg-zinc-950 dark:text-zinc-600">
+            <p className="bg-white px-4 text-3xl text-zinc-400 dark:bg-zinc-950 dark:text-zinc-600">
               {dates.wedding.toLocaleDateString("en-US", { weekday: "long" })}
             </p>
           </div>
@@ -49,6 +49,7 @@ export function DateVenue() {
             </Location>
             <Button
               href="https://maps.app.goo.gl/TPhkLNjw3MmwZuRF6"
+              size="lg"
               target="_blank"
             >
               View Map
@@ -72,6 +73,7 @@ export function DateVenue() {
             </Location>
             <Button
               href="https://maps.app.goo.gl/erkLD8hTQ3iAj2PTA"
+              size="lg"
               target="_blank"
             >
               View Map

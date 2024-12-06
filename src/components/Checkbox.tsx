@@ -11,7 +11,7 @@ export type CheckboxProps = AriaCheckboxProps & {
 export function Checkbox({ children, ...props }: CheckboxProps) {
   return (
     <AriaCheckbox
-      className="flex items-center gap-2 text-sm text-zinc-800 forced-color-adjust-none dark:text-zinc-300"
+      className="flex items-center gap-2 text-zinc-800 forced-color-adjust-none dark:text-zinc-300"
       {...props}
     >
       {({ isFocusVisible, isSelected }) => (

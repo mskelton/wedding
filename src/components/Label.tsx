@@ -6,7 +6,7 @@ import {
 export function Label(props: AriaLabelProps) {
   return (
     <AriaLabel
-      className="mb-1 block text-sm text-zinc-800 dark:text-zinc-300"
+      className="mb-1 block text-zinc-800 dark:text-zinc-300"
       {...props}
     />
   )
