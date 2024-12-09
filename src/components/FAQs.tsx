@@ -12,17 +12,9 @@ export function FAQs() {
       <PageSectionTitle>FAQs</PageSectionTitle>
 
       <Prose>
-        <Question>Is the wedding indoors or outdoors?</Question>
-        <Answer>
-          Both the ceremony and reception will be indoors. The reception will
-          have some outdoor space to walk around, if you are feeling adventurous
-          in early{" "}
-          {dates.wedding.toLocaleDateString("en-US", { month: "long" })}!
-        </Answer>
-
         <Question>What should I wear?</Question>
         <Answer>
-          As you probably know, we are both pretty casually in general, so while
+          As you probably know, we are both pretty casual in general, so while
           the wedding party will be dressed up, we hope that you will attend
           regardless of how formal or casual you choose to dress!
         </Answer>
