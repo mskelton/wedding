@@ -16,7 +16,11 @@ export function DateVenue() {
     <PageSection className="text-center" id="date-venue">
       <div>
         <PageSectionTitle className="mb-4">
-          {formatStylizedDate(dates.wedding)}
+          {formatStylizedDate(dates.wedding, {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}
         </PageSectionTitle>
 
         <div className="relative mb-16 w-full">

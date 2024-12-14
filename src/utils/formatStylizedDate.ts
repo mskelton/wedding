@@ -1,9 +1,10 @@
-export function formatStylizedDate(date: Date) {
+export function formatStylizedDate(
+  date: Date,
+  options?: Intl.DateTimeFormatOptions,
+) {
   const parts = new Intl.DateTimeFormat("en-US", {
-    day: "numeric",
-    month: "long",
+    ...options,
     timeZone: "America/Chicago",
-    year: "numeric",
   }).formatToParts(date)
 
   return parts

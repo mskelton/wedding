@@ -1,4 +1,5 @@
 import { dates } from "../utils/date"
+import { formatStylizedDate } from "../utils/formatStylizedDate"
 import { styled } from "../utils/styled"
 import { Prose } from "./Prose"
 import { PageSection, PageSectionTitle } from "./Section"
@@ -12,6 +13,16 @@ export function FAQs() {
       <PageSectionTitle>FAQs</PageSectionTitle>
 
       <Prose>
+        <Question>What is the RSVP deadline?</Question>
+        <Answer>
+          Our deadline for RSVPs is{" "}
+          {formatStylizedDate(dates.rsvpDeadline, {
+            day: "numeric",
+            month: "long",
+          })}
+          , but please RSVP as soon as possible.
+        </Answer>
+
         <Question>What should I wear?</Question>
         <Answer>
           As you probably know, we are both pretty casual in general, so while
