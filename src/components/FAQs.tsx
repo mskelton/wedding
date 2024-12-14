@@ -19,6 +19,17 @@ export function FAQs() {
           regardless of how formal or casual you choose to dress!
         </Answer>
 
+        <Question>When will food be served at the reception?</Question>
+        <Answer>
+          Food will be served by{" "}
+          {dates.food.toLocaleTimeString("en-US", {
+            hour: "numeric",
+            minute: "2-digit",
+            timeZone: "America/Chicago",
+          })}{" "}
+          and will be a variety of hors d’oeuvres and desserts.
+        </Answer>
+
         <Question>What time will the reception end?</Question>
         <Answer>
           The bride and groom will be leaving the reception around{" "}

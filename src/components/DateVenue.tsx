@@ -72,7 +72,7 @@ export function DateVenue() {
               Stockton, Illinois
             </Location>
             <Button
-              href="https://maps.app.goo.gl/erkLD8hTQ3iAj2PTA"
+              href="https://maps.app.goo.gl/BJLDVAjQL3pArUbZ8"
               size="lg"
               target="_blank"
             >

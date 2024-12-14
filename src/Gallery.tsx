@@ -11,6 +11,7 @@ const images = [
   {
     alt: "TODO",
     className: "lg:row-span-4 lg:col-span-2",
+    imageClassName: "object-[top]",
     src: "/images/hero-3.jpg",
   },
   {
@@ -21,11 +22,13 @@ const images = [
   {
     alt: "TODO",
     className: "lg:row-span-12 lg:col-span-5",
+    imageClassName: "lg:object-[left_-80px_top_0] xl:object-center",
     src: "/images/hero-5.jpg",
   },
   {
     alt: "TODO",
     className: "lg:row-span-8 lg:col-span-4",
+    imageClassName: "object-[top]",
     src: "/images/hero-8.jpg",
   },
   {
