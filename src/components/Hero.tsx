@@ -3,7 +3,7 @@ import { Button } from "./Button"
 import { WeddingDateCounter } from "./WeddingDateCounter"
 
 const Header = styled.h1(
-  "font-cursive text-8xl xs:text-7xl sm:text-8xl md:text-9xl px-4",
+  "font-cursive text-[clamp(2rem,16vw,6rem)] md:text-[clamp(2rem,10vw,6rem)] [line-height:1] px-4",
 )
 
 export function Hero() {
@@ -14,8 +14,8 @@ export function Hero() {
           <source media="(max-width: 767px)" srcSet="/images/hero-mobile.jpg" />
 
           <img
-            alt="A photo of the couple"
-            className="size-full object-cover object-left"
+            alt="Mark & Rianna"
+            className="size-full object-cover object-top md:object-[right_0_top_10%]"
             src="/images/hero.jpg"
           />
         </picture>
@@ -26,7 +26,7 @@ export function Hero() {
           Mark &amp; Rianna
         </Header>
 
-        <div className="absolute bottom-20 left-0 right-0 space-y-8 px-4">
+        <div className="absolute bottom-20 left-0 right-0 space-y-8">
           <Header className="hidden md:block">Mark &amp; Rianna</Header>
 
           <WeddingDateCounter />
