@@ -36,21 +36,21 @@ const images = [
     className: "lg:row-span-6 lg:col-span-3",
     src: "/images/hero-9.jpg",
   },
-  // {
-  //   alt: "TODO",
-  //   className: "lg:row-span-4 lg:col-span-4",
-  //   src: "/images/hero-8.jpg",
-  // },
-  // {
-  //   alt: "TODO",
-  //   className: "lg:row-span-4 lg:col-span-4",
-  //   src: "/images/hero-9.jpg",
-  // },
-  // {
-  //   alt: "TODO",
-  //   className: "lg:row-span-4 lg:col-span-4",
-  //   src: "/images/hero-10.jpg",
-  // },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/hero-8.jpg",
+  },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/hero-9.jpg",
+  },
+  {
+    alt: "TODO",
+    className: "lg:row-span-4 lg:col-span-4",
+    src: "/images/hero-10.jpg",
+  },
 ]
 
 export function Gallery() {

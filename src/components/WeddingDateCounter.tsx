@@ -6,7 +6,7 @@ function Item({ label, value }: { label: string; value: number }) {
     <span className="flex gap-0.5 text-xl">
       <span suppressHydrationWarning>{value}</span>
 
-      <span aria-label={label} className="mt-px text-zinc-400">
+      <span aria-label={label} className="mt-[0.5px] text-zinc-400">
         {label[0]}
       </span>
     </span>
