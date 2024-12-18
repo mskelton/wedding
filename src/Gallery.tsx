@@ -3,13 +3,13 @@ import ZoomableImage from "./components/ZoomableImage"
 
 const images = [
   {
-    className: "lg:row-span-6 lg:col-span-4 xl:row-span-7 xl:col-span-4",
-    // imageClassName: "object-[top]",
-    src: "/images/final-4.jpg",
+    className: "lg:row-span-6 lg:col-span-4 xl:row-span-10 xl:col-span-4",
+    imageClassName: "object-[left_0_bottom_30%]",
+    src: "/images/final-17.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-5 xl:row-span-12 xl:col-span-3",
-    imageClassName: "object-[top_40%_left_50%]",
+    // imageClassName: "object-[top_40%_left_50%]",
     src: "/images/final-3.jpg",
   },
   {
@@ -19,18 +19,19 @@ const images = [
   },
   {
     className:
-      "lg:row-[span_13/span_13] lg:col-span-4 xl:row-[span_13/span_13] xl:col-span-4",
-    // imageClassName: "object-[top]",
-    src: "/images/final-5.jpg",
+      "lg:row-[span_13/span_13] lg:col-span-4 xl:row-span-10 xl:col-span-4",
+    imageClassName: "object-[left_20%_top_0]",
+    src: "/images/final-10.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
-    src: "/images/final-22.jpg",
+    // imageClassName: "object-[left_0_bottom_30%]",
+    src: "/images/final-24.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
     imageClassName: "",
-    src: "/images/final-1.jpg",
+    src: "/images/final-2.jpg",
   },
 ]
 

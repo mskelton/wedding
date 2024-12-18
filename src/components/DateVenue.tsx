@@ -69,7 +69,7 @@ export function DateVenue() {
                 timeZone: "America/Chicago",
               })}
             </Time>
-            <LocationName>The Field House</LocationName>
+            <LocationName>The Fieldhouse</LocationName>
             <Location>
               8775 S Town Hall Rd
               <br />
