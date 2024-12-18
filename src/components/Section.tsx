@@ -39,7 +39,7 @@ export function PageSectionImage({
   src: string
 }) {
   return (
-    <div className="relative mx-auto mb-20 h-[320px] w-[1200px] max-w-full md:h-[700px]">
+    <div className="relative mx-auto mb-20 aspect-video w-[1200px] max-w-full md:aspect-auto md:h-[700px]">
       <img
         alt={alt}
         className={clsx(
