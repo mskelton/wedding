@@ -3,7 +3,7 @@ import { Button } from "./Button"
 import { WeddingDateCounter } from "./WeddingDateCounter"
 
 const Header = styled.h1(
-  "font-cursive text-[clamp(2rem,16vw,6rem)] md:text-[clamp(2rem,10vw,6rem)] [line-height:1] px-4",
+  "font-cursive text-[clamp(2rem,16vw,4rem)] md:text-[clamp(2rem,10vw,6rem)] [line-height:1] px-4",
 )
 
 export function Hero() {
@@ -22,12 +22,8 @@ export function Hero() {
       </div>
 
       <div className="text-center text-white">
-        <Header className="absolute left-0 right-0 top-20 md:hidden">
-          Mark &amp; Rianna
-        </Header>
-
         <div className="absolute bottom-20 left-0 right-0 space-y-8">
-          <Header className="hidden md:block">Mark &amp; Rianna</Header>
+          <Header>Mark &amp; Rianna</Header>
 
           <WeddingDateCounter />
 
