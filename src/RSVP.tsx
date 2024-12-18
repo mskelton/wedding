@@ -70,12 +70,16 @@ function RSVPForm({
   onSubmit,
   status,
 }: {
-  onSubmit: (data: FormData) => void
+  onSubmit: (data: FormData) => Promise<void>
   status: FormStatus
 }) {
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    onSubmit(new FormData(event.currentTarget))
+
+    const form = event.currentTarget
+    await onSubmit(new FormData(form))
+
+    form.reset()
   }
 
   return (
@@ -97,13 +101,11 @@ function RSVPForm({
       {status === "success" ? (
         <div className="mb-8 border border-green-600 px-4 py-3">
           <p className="mb-2 text-lg font-semibold text-green-600">
-            We can’t wait to see you there!
+            Yay, you’re all set!
           </p>
 
           <p className="font-sans text-sm font-light text-zinc-600 dark:text-zinc-400">
-            We’ve received your RSVP and can’t wait to see you there! If you
-            have any more questions or need to make any changes, feel free to
-            give us a shout!
+            If you need to make any changes, feel free to give us a shout!
           </p>
         </div>
       ) : null}
