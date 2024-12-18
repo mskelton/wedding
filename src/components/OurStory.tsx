@@ -21,9 +21,7 @@ export function OurStory() {
 
       <div className="isolate mx-auto w-[1000px] max-w-full bg-white !pb-0 dark:bg-zinc-950 md:-mt-40 md:max-w-[80vw] md:p-20">
         <PageSectionTitle>Our Story</PageSectionTitle>
-        <PageSectionSubtitle className="italic">
-          Impossible made possible
-        </PageSectionSubtitle>
+        <PageSectionSubtitle>Impossible made possible</PageSectionSubtitle>
         <PageSectionSeparator />
 
         <Prose className="text-justify prose-p:text-lg prose-p:leading-loose">

@@ -4,7 +4,7 @@ import { styled } from "../utils/styled"
 import { Prose } from "./Prose"
 import { PageSection, PageSectionTitle } from "./Section"
 
-const Question = styled.h3()
+const Question = styled.h3("text-zinc-200")
 const Answer = styled.p()
 
 export function FAQs() {
@@ -15,12 +15,11 @@ export function FAQs() {
       <Prose>
         <Question>What is the RSVP deadline?</Question>
         <Answer>
-          Our deadline for RSVPs is{" "}
           {formatStylizedDate(dates.rsvpDeadline, {
             day: "numeric",
             month: "long",
           })}
-          , but please RSVP as soon as possible.
+          , but please respond as soon as possible.
         </Answer>
 
         <Question>What should I wear?</Question>
@@ -59,8 +58,8 @@ export function FAQs() {
           We are registered at{" "}
           <a href="https://www.amazon.com/wedding/share/skelton-caswell">
             Amazon
-          </a>{" "}
-          but please do not in any way feel obligated to give a gift. Your
+          </a>
+          , but please do not in any way feel obligated to give a gift. Your
           presence at our wedding is what we would like most!
         </Answer>
 
@@ -76,7 +75,7 @@ export function FAQs() {
         </Question>
         <Answer>
           Most definitely, and if you take some nice photos we’d love to see
-          them, so feel free to tag us on social media!
+          them, so please tag us on social media!
         </Answer>
 
         <Question>Who can I contact with any questions?</Question>
