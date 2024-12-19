@@ -1,20 +1,22 @@
 import clsx from "clsx"
-import ZoomableImage from "./components/ZoomableImage"
+import GalleryImage from "./components/GalleryImage"
 
 const images = [
   {
     className: "lg:row-span-6 lg:col-span-4 xl:row-span-10 xl:col-span-4",
-    imageClassName: "object-[left_0_bottom_30%]",
+    imageClassName:
+      "object-[left_0_top_60%] sm:object-[left_0_top_75%] lg:object-[left_0_bottom_30%]",
     src: "/images/final-17.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-5 xl:row-span-12 xl:col-span-3",
-    // imageClassName: "object-[top_40%_left_50%]",
+    imageClassName:
+      "object-[left_0_top_30%] sm:object-[left_0_top_25%] lg:object-[top_20%_left_50%]",
     src: "/images/final-3.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-3 xl:row-span-12 xl:col-span-5",
-    imageClassName: "object-[left_20%_top_0]",
+    imageClassName: "object-[left_20%_top_20%] lg:object-[left_20%_top_0]",
     src: "/images/final-11.jpg",
   },
   {
@@ -42,13 +44,13 @@ export function Gallery() {
       id="gallery"
     >
       {images.map((image, i) => (
-        <ZoomableImage
+        <GalleryImage
           key={i}
           {...image}
           alt="Mark & Rianna's engagement photo shoot"
           className={clsx("row-span-1", image.className)}
           imageClassName={clsx(
-            "h-[300px] w-full object-cover lg:size-full",
+            "aspect-video w-full object-cover sm:aspect-[16/12] lg:aspect-auto lg:size-full",
             image.imageClassName,
           )}
         />
