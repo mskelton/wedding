@@ -3,7 +3,7 @@ import GalleryImage from "./components/GalleryImage"
 
 const images = [
   {
-    className: "lg:row-span-6 lg:col-span-4 xl:row-span-10 xl:col-span-4",
+    className: "lg:row-span-8 lg:col-span-4 xl:row-span-10 xl:col-span-4",
     imageClassName:
       "object-[left_0_top_60%] sm:object-[left_0_top_75%] lg:object-[left_0_bottom_30%]",
     src: "/images/final-17.jpg",
@@ -20,19 +20,18 @@ const images = [
     src: "/images/final-11.jpg",
   },
   {
-    className:
-      "lg:row-[span_13/span_13] lg:col-span-4 xl:row-span-10 xl:col-span-4",
-    imageClassName: "object-[left_20%_top_0]",
+    className: "lg:row-span-12 lg:col-span-4 xl:row-span-10 xl:col-span-4",
+    imageClassName: "object-bottom sm:object-left lg:object-[left_25%_top_0]",
     src: "/images/final-10.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
-    // imageClassName: "object-[left_0_bottom_30%]",
     src: "/images/final-24.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
-    imageClassName: "",
+    imageClassName:
+      "object-top sm:object-right lg:object-[left_80%_top_0] xl:object-[center_top_0]",
     src: "/images/final-2.jpg",
   },
 ]
@@ -40,7 +39,7 @@ const images = [
 export function Gallery() {
   return (
     <div
-      className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-[repeat(20,40px)]"
+      className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:invisible lg:grid-cols-12 lg:grid-rows-[repeat(20,40px)] xl:visible"
       id="gallery"
     >
       {images.map((image, i) => (
