@@ -3,16 +3,15 @@ import { defineConfig } from "vite"
 import { createHtmlPlugin } from "vite-plugin-html"
 
 const preloadImages = [
-  { href: "hero.jpg", media: "(min-width: 768px)" },
-  { href: "hero-2.jpg", media: "(min-width: 768px)" },
-  { href: "hero-3.jpg", media: "(min-width: 768px)" },
-  { href: "hero-4.jpg", media: "(min-width: 768px)" },
-  { href: "hero-5.jpg", media: "(min-width: 768px)" },
-  { href: "hero-7.jpg", media: "(min-width: 768px)" },
-  { href: "hero-8.jpg", media: "(min-width: 768px)" },
-  { href: "hero-9.jpg", media: "(min-width: 768px)" },
-  { href: "hero-10.jpg", media: "(min-width: 768px)" },
-  { href: "hero-mobile.jpg", media: "(max-width: 767px)" },
+  { href: "/images/final-10.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-11.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-17.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-18.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-2.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-24.jpg", media: "(min-width: 768px)" },
+  { href: "/images/final-3.jpg", media: "(min-width: 768px)" },
+  { href: "/images/hero-mobile.jpg", media: "(max-width: 767px)" },
+  { href: "/images/hero.jpg", media: "(min-width: 768px)" },
 ]
 
 const preloadFonts = [
