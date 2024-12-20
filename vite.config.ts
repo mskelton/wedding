@@ -3,15 +3,15 @@ import { defineConfig } from "vite"
 import { createHtmlPlugin } from "vite-plugin-html"
 
 const preloadImages = [
-  { href: "/images/final-10.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-11.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-17.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-18.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-2.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-24.jpg", media: "(min-width: 768px)" },
-  { href: "/images/final-3.jpg", media: "(min-width: 768px)" },
+  { href: "/images/arm-around-back.jpg", media: "(min-width: 768px)" },
+  { href: "/images/arm-around-neck.jpg", media: "(min-width: 768px)" },
+  { href: "/images/chair.jpg", media: "(min-width: 768px)" },
   { href: "/images/hero-mobile.jpg", media: "(max-width: 767px)" },
   { href: "/images/hero.jpg", media: "(min-width: 768px)" },
+  { href: "/images/leaning-back.jpg", media: "(min-width: 768px)" },
+  { href: "/images/open-room.jpg", media: "(min-width: 768px)" },
+  { href: "/images/our-story.jpg", media: "(min-width: 768px)" },
+  { href: "/images/ring.jpg", media: "(min-width: 768px)" },
 ]
 
 const preloadFonts = [

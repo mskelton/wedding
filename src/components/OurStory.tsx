@@ -15,7 +15,7 @@ export function OurStory() {
         <PageSectionImage
           alt="Mark & Rianna"
           className="object-[top_0_left_50%]"
-          src="/images/final-18.jpg"
+          src="/images/our-story.jpg"
         />
       </PageSectionFullWidth>
 

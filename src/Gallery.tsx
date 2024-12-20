@@ -6,33 +6,33 @@ const images = [
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-10 xl:col-span-4",
     imageClassName:
       "object-[left_0_top_60%] sm:object-[left_0_top_75%] lg:object-[left_0_bottom_30%]",
-    src: "/images/final-17.jpg",
+    src: "/images/leaning-back.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-5 xl:row-span-12 xl:col-span-3",
     imageClassName:
       "object-[left_0_top_30%] sm:object-[left_0_top_25%] lg:object-[top_20%_left_50%]",
-    src: "/images/final-3.jpg",
+    src: "/images/arm-around-neck.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-3 xl:row-span-12 xl:col-span-5",
     imageClassName: "object-[left_20%_top_20%] lg:object-[left_20%_top_0]",
-    src: "/images/final-11.jpg",
+    src: "/images/open-room.jpg",
   },
   {
     className: "lg:row-span-12 lg:col-span-4 xl:row-span-10 xl:col-span-4",
     imageClassName: "object-bottom sm:object-left lg:object-[left_25%_top_0]",
-    src: "/images/final-10.jpg",
+    src: "/images/arm-around-back.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
-    src: "/images/final-24.jpg",
+    src: "/images/ring.jpg",
   },
   {
     className: "lg:row-span-8 lg:col-span-4 xl:row-span-8 xl:col-span-4",
     imageClassName:
       "object-top sm:object-right lg:object-[left_80%_top_0] xl:object-[center_top_0]",
-    src: "/images/final-2.jpg",
+    src: "/images/chair.jpg",
   },
 ]
 
