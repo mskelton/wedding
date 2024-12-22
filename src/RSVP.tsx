@@ -123,7 +123,7 @@ function RSVPForm({
           </FieldError>
         </TextField>
 
-        <NumberField defaultValue={0} minValue={0} name="attendees">
+        <NumberField defaultValue={0} minValue={0} name="additional_attendees">
           <Label>Additional guests</Label>
           <Input />
         </NumberField>
