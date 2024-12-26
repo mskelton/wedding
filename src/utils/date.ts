@@ -1,7 +1,7 @@
 const wedding = new Date("2025-03-01T13:30:00-06:00")
-const reception = addMinutes(wedding, 60 + 45)
-const food = addMinutes(reception, 15)
-const receptionEnd = addMinutes(reception, 60 + 60 + 15)
+const reception = addMinutes(wedding, 60 + 30 + 30)
+const food = addMinutes(reception, 30)
+const receptionEnd = addMinutes(reception, 60 + 60 + 30)
 
 export const dates = {
   food,

@@ -31,7 +31,7 @@ export function FAQs() {
 
         <Question>When will food be served at the reception?</Question>
         <Answer>
-          Food will be served by{" "}
+          Food will be served around{" "}
           {dates.food.toLocaleTimeString("en-US", {
             hour: "numeric",
             minute: "2-digit",
@@ -48,9 +48,8 @@ export function FAQs() {
             minute: "2-digit",
             timeZone: "America/Chicago",
           })}
-          , but you are more than welcome to stay as long as you would like!
-          Just be careful not to stay too late or you might get roped into
-          helping the cleanup crew!
+          , but you are more than welcome to stay as long as you would like! Our
+          cleanup crew will gladly accept your help 😉.
         </Answer>
 
         <Question>Do you have a registry?</Question>
