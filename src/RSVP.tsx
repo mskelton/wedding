@@ -15,16 +15,38 @@ import {
 } from "./components/Section"
 import { TextArea } from "./components/TextArea"
 import { TextField } from "./components/TextField"
+import { dates } from "./utils/date"
 import { db } from "./utils/db"
 import { startViewTransition } from "./utils/startViewTransition"
 
 type FormStatus = "error" | "idle" | "submitting" | "success"
 
+type ErrorMessage = {
+  description: string
+  title: string
+}
+
 export function RSVP() {
   const confettiRef = useRef<ConfettiRef | null>(null)
   const [status, setStatus] = useState<FormStatus>("idle")
+  const [errorMessage, setErrorMessage] = useState<ErrorMessage | null>(null)
 
   async function handleSubmit(formData: FormData) {
+    if (new Date() > dates.wedding) {
+      startViewTransition(() => {
+        flushSync(() => {
+          setStatus("error")
+          setErrorMessage({
+            description:
+              "It would have been nice to have you at our wedding, but since we're already married and you're just now sending an RSVP, you might want to work on your punctuality 😉.",
+            title: "A little too late",
+          })
+        })
+      })
+
+      return
+    }
+
     setStatus("submitting")
 
     const { error } = await db.from("attendees").insert({
@@ -38,7 +60,14 @@ export function RSVP() {
 
     if (error) {
       startViewTransition(() => {
-        flushSync(() => setStatus("error"))
+        flushSync(() => {
+          setStatus("error")
+          setErrorMessage({
+            description:
+              "Something didn’t work when we tried submitting your RVSP. You can blame Mark, he’s the one that decided it would be a good idea to build a custom wedding website.",
+            title: "Uh oh, we messed up",
+          })
+        })
       })
 
       console.error(error)
@@ -58,7 +87,11 @@ export function RSVP() {
         </PageSectionSubtitle>
         <PageSectionSeparator />
 
-        <RSVPForm onSubmit={handleSubmit} status={status} />
+        <RSVPForm
+          errorMessage={errorMessage}
+          onSubmit={handleSubmit}
+          status={status}
+        />
       </PageSection>
 
       <Confetti ref={confettiRef} className="z-50" />
@@ -67,9 +100,11 @@ export function RSVP() {
 }
 
 function RSVPForm({
+  errorMessage,
   onSubmit,
   status,
 }: {
+  errorMessage: ErrorMessage | null
   onSubmit: (data: FormData) => Promise<void>
   status: FormStatus
 }) {
@@ -84,16 +119,14 @@ function RSVPForm({
 
   return (
     <form className="mx-auto w-full max-w-lg" onSubmit={handleSubmit}>
-      {status === "error" ? (
+      {status === "error" && errorMessage ? (
         <div className="mb-8 border border-red-600 px-4 py-3">
           <p className="mb-2 text-lg font-semibold text-red-600">
-            Uh oh, we messed up
+            {errorMessage.title}
           </p>
 
           <p className="font-sans text-sm font-light text-zinc-600 dark:text-zinc-400">
-            Something didn’t work when we tried submitting your RVSP. You can
-            blame Mark, he’s the one that decided it would be a good idea to
-            build a custom wedding website.
+            {errorMessage.description}
           </p>
         </div>
       ) : null}
