@@ -31,8 +31,8 @@ export function RSVP() {
       additional_attendees: parseInt(
         formData.get("additional_attendees") as string,
       ),
-      name: formData.get("name") as string,
-      notes: formData.get("notes") as string,
+      name: (formData.get("name") as string).trim(),
+      notes: (formData.get("notes") as string).trim(),
       reception: formData.get("reception") === "on",
     })
 
