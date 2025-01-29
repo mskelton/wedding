@@ -7,7 +7,7 @@ export const dates = {
   food,
   reception,
   receptionEnd,
-  rsvpDeadline: new Date("2025-02-01T00:00:00-06:00"),
+  rsvpDeadline: new Date("2025-02-08T00:00:00-06:00"),
   wedding,
 }
 
